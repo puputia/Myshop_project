@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="./login_style.css" />
+    <script src="https://kit.fontawesome.com/08d1af579d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="member_container">
+        <div class="wrapper">
+            <header class="member-header">
+                <div class="member-logo"><img src="./logo/logosmall2.png"width="300" height="120"></div>
+            </header>
+            <section class="login-input-section-wrap">
+                <div class="login-input-wrap">	
+                    <div class="id_icon"><i class="fa fa-user"></i>
+                    <input type="text" placeholder="ID" id="id"  class="account">
+                    </div>
+                </div>
+                <div class="login-input-wrap password-wrap">
+                    <div class="pw_icon"><i class="fa fa-lock"></i>
+                    <input type="password" placeholder="Password" id="password"  class="account"></div>
+                </div>
+                <div class="login-button-wrap">
+                    <button id="login" class="account">로그인</button>
+                    <p id="alert" class="account"></p>
+                </div>
+                <div class="sign-in-wrap">
+                    <button>회원가입</button>
+                </div>
+                <div class="login-stay-sign-in">
+                    <div class="stay_signlogo">
+                        <i class="far fa-check-square"></i>
+                        <span>로그인 상태유지</span>
+                    </div>
+                </div>
+            </section>
+            </div>
+            <footer>
+                <div class="copyright-wrap">
+                    <span>Copyright © My shop Corp. All Rights Reserved.</span> 
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

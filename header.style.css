@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --acent-color: lightblue;
+}
+.header_container {
+    width:100%;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	margin-top: 21px;
+}
+
+body {
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.menu-dropdown {
+    margin: 40px;
+    padding: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #263343;
+    padding: 8px 12px;
+    font-family: 'LeferiPoint-BlackA';
+}
+ 
+.h1 a {
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar_icons {
+    font-size: 24px;
+    color: var(--text-color);
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
+}
+
+.menu-btn i {
+    border: 3px solid  black;
+    font-size: 40px;
+    color: white;
+    background-color: royalblue;
+    
+}
+
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_menu li {
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icon {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar_toogleBtn {
+        display: block;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+}
+ 
