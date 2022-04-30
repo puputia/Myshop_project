@@ -88,40 +88,32 @@ body {
 .product_order .product_option-box {
   border-bottom: 1px solid #ddd;
 }
+
 .product_order .product_option-box .option {
-}
-.option .option-type {
   display: flex;
+  align-items: center;
+  gap: 16px;
 }
+.option .option-name {
+}
+.option select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 
-.option .option-type ~ .option-type {
-  margin-top: 8px;
-  line-height: 1.5;
-}
-
-.option .option-type .option-name {
-  margin: 8px 0;
-}
-.option .option-type ul {
-  display: flex;
-}
-.option .option-type ul li.option-select {
-  margin-left: 16px;
-  padding: 8px 16px;
+  flex-grow: 1;
+  padding: 12px;
+  outline: none;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  border: 2px solid #ddd;
-  color: #999;
+}
 
-  position: relative;
+.option select option {
+  padding: 16px;
 }
-li.option-select .btn-check {
-  position: absolute;
-  top: 0;
-  left: 0;
-  visibility: hidden;
-}
-li.option-select label.item-name {
-  font-weight: 600;
+
+.option select option:focus {
+  background-color: var(--acent-color);
 }
 
 .product_order .total-price {

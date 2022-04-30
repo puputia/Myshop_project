@@ -64,7 +64,18 @@
             <!------------ 옵션 -------------->
 
             <div class="product_option-box">
-              <div id="@option.productOptionId" class="option">
+              <div class="option">
+                <p class="option-name">@option.name</p>
+                <!-- name 옵션데이터이름을 넣어주세요 -->
+                <select name="size">
+                  <option>사이즈를 선택하세요</option>
+                  <option value="option-1">옵션명1</option>
+                  <option value="option-2">옵션명2</option>
+                  <option value="option-3">옵션명3</option>
+                  <option value="option-4">옵션명4</option>
+                  <option value="option-5">옵션명5</option>
+                </select>
+              </div>
                 <div
                   id="radio-wrapper @option.productOptionId"
                   class="option-type"
@@ -103,7 +114,7 @@
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <!------------ //옵션 -------------->
