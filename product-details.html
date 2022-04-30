@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/product-details.css" />
+    <title>상품 상세</title>
+  </head>
+  <body>
+    <!-- 대치필요 -->
+    <header class="header">헤더영역 @views.html.common.header()</header>
+    <!-- //대치필요 -->
+    <input type="hidden" id="user_id" value="" />
+    <input type="hidden" id="option-count" value="@product.optionList.size" />
+    <input type="hidden" id="product_id" value="@product.productId" />
+    <input type="hidden" id="name" value="@product.name" />
+
+    <div class="container">
+      <!-- ------------------상단 정보 영역------------------- -->
+      <section class="product_top-info">
+        <div class="inner">
+          <article class="product_thum">
+            <div class="thum_img-list">
+              <ul>
+                <!-- <li><img src="@product.thumbnail" alt="@product.name" /></li> -->
+
+                <!-- 테스트 임시 썸네일 -->
+                <li class="active">
+                  <img src="img/product-img.jfif" alt="@product.name" />
+                </li>
+                <li><img src="img/product-img.jfif" alt="@product.name" /></li>
+                <!-- //테스트 임시 썸네일 -->
+              </ul>
+            </div>
+
+            <div class="thum_main-img">
+              <!-- 큰 썸네일에 alt값 추가가 필요합니다 -->
+              <!-- <img src="@product.thumbnail" alt="" /> -->
+
+              <!-- 테스트 임시 썸네일 -->
+              <img src="img/product-img.jfif" alt="" />
+              <!-- //테스트 임시 썸네일 -->
+            </div>
+          </article>
+
+          <article class="product_order">
+            <div class="order_tit-box">
+              <h2 class="product-name">@product.name</h2>
+              <p class="review-total">
+                <!-- 별 넣을곳 -->
+                <span class="total-count">1개 상품평</span>
+              </p>
+            </div>
+
+            <div class="product_price">
+              <input type="hidden" value="@product.price" name="price" />
+              <!-- <p id="price">@product.price 원</p> -->
+              <p id="price">30,000 원</p>
+            </div>
+
+            <!------------ 옵션 -------------->
+
+            <div class="product_option-box">
+              <div id="@option.productOptionId" class="option">
+                <div
+                  id="radio-wrapper @option.productOptionId"
+                  class="option-type"
+                >
+                  <p class="option-name">@option.name</p>
+                  <ul>
+                    <li class="option-select">
+                      <input
+                        type="hidden"
+                        name="item-name"
+                        value="@item.name"
+                      />
+                      <input
+                        type="hidden"
+                        name="item-id"
+                        value="@item.productOptionItemId"
+                      />
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        autocomplete="off"
+                        name="option@option.productOptionId"
+                        id="item@item.productOptionItemId"
+                        value="@item.productOptionItemId"
+                      />
+                      <label
+                        for="item@item.productOptionItemId"
+                        class="item-name"
+                        >@item.name</label
+                      >
+                      <input
+                        type="hidden"
+                        name="surcharge"
+                        value="@item.surcharge"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!------------ //옵션 -------------->
+
+            <!------------ 수량조절, 가격 -------------->
+
+            <div class="total-price">
+              <p>총 상품가격</p>
+              <input type="hidden" value="@product.price" />
+              <strong id="totPrice">@product.price 원</strong>
+            </div>
+            <!------------ //수량조절, 가격 -------------->
+
+            <!------------ 구매, 장바구니 버튼 -------------->
+            <div class="order-btn-grp">
+              <div class="order_count">
+                <button class="count_minus-btn" id="sub-quantity">-</button>
+                <input
+                  name="quantity"
+                  id="quantity"
+                  type="number"
+                  class="count-number"
+                  value="1"
+                />
+                <button class="count_plus-btn" id="add-quantity">+</button>
+              </div>
+
+              <button
+                class="add-cart_btn"
+                type="button"
+                id="add-cart-button"
+                value="cart"
+              >
+                장바구니담기
+              </button>
+              <button class="buy-now_btn" type="button" value="order">
+                구매하기
+              </button>
+            </div>
+            <!------------ //구매, 장바구니 버튼 -------------->
+          </article>
+        </div>
+      </section>
+      <!-- ------------------//상단 정보 영역------------------- -->
+
+      <!-- start tab-area -->
+      <div class="tab-contents">
+        <div class="inner">
+          <div class="product_tab-titles">
+            <ul>
+              <li class="active">
+                <a aria-current="page" href="#details">상세정보</a>
+              </li>
+              <li>
+                <a href="#review">상품평</a>
+              </li>
+              <li>
+                <a href="#qna">상품문의</a>
+              </li>
+            </ul>
+          </div>
+
+          <section class="product-detail" id="details">
+            <!-- 임시 상세이미지 -->
+            <img src="img/product-img.jfif" alt="임시 상세이미지" />
+            <!-- //임시 상세이미지 -->
+          </section>
+
+          <section class="product-review" id="review">
+            <div class="tit-box">
+              <h2 class="section-tit">상품평</h2>
+              <p class="section-tit-des">
+                - 상품을 구매한 다른 사람들의 리뷰를 살펴보세요
+              </p>
+            </div>
+
+            <div class="review-grp">
+              <article class="user-review">
+                <div class="review_top-box">
+                  <h3 class="review_tit">리뷰 제목</h3>
+                  <div class="review_info">
+                    <!-- 별은 아이콘으로 대체 -->
+                    <p class="review_stars">
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span>★</span>
+                    </p>
+                    <!-- 별은 아이콘으로 대체 -->
+                    <span class="review_product-info"
+                      >구매상품명과 옵션 내용</span
+                    >
+                    <span class="review_writing-time">2022.04.15 00:00:00</span>
+                  </div>
+                </div>
+
+                <div class="review_detail">
+                  <div class="review_txt">
+                    <p>
+                      테스트 글/// 커다란 지혜는 영원히 앞이 군영과 청춘에서만
+                      곳으로 실로 쓸쓸한 철환하였는가? 역사를 우리의 용감하고
+                      이상 뿐이다. 관현악이며, 이상, 희망의 피는 이것이야말로
+                      철환하였는가? 옷을 긴지라 싹이 사막이다. 못할 피어나는
+                      산야에 찾아다녀도, 이것을 우리 인간의 반짝이는 행복스럽고
+                      끓는다. 창공에 노년에게서 위하여, 가치를 든 역사를
+                      위하여서 교향악이다. 가진 할지니, 살았으며, 소담스러운
+                      피가 구하지 이상은 힘차게 끓는다. 자신과 노래하며 피에
+                      설산에서 품에 그들의 별과 생의 지혜는 쓸쓸하랴? 천자만홍이
+                      봄날의 하는 이성은 행복스럽고 얼마나 물방아 트고, 것이다.
+                      꽃 있는 것이다.보라, 뼈 열락의 길지 꽃이 끓는다. 어디
+                      현저하게 청춘 말이다.
+                    </p>
+                    <a href="#" class="read-more-btn">리뷰 내용 더보기 >> </a>
+                  </div>
+                  <ul class="review_photo">
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <!-- 테스트  -->
+              <article class="user-review">
+                <div class="review_top-box">
+                  <h3 class="review_tit">리뷰 제목</h3>
+                  <div class="review_info">
+                    <!-- 별은 아이콘으로 대체 -->
+                    <p class="review_stars">
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span>★</span>
+                    </p>
+                    <!-- 별은 아이콘으로 대체 -->
+                    <span class="review_product-info"
+                      >구매상품명과 옵션 내용</span
+                    >
+                    <span class="review_writing-time">2022.04.15 00:00:00</span>
+                  </div>
+                </div>
+
+                <div class="review_detail">
+                  <div class="review_txt">
+                    <p>
+                      테스트 글/// 커다란 지혜는 영원히 앞이 군영과 청춘에서만
+                      곳으로 실로 쓸쓸한 철환하였는가? 역사를 우리의 용감하고
+                      이상 뿐이다. 관현악이며, 이상, 희망의 피는 이것이야말로
+                      철환하였는가? 옷을 긴지라 싹이 사막이다. 못할 피어나는
+                      산야에 찾아다녀도, 이것을 우리 인간의 반짝이는 행복스럽고
+                      끓는다. 창공에 노년에게서 위하여, 가치를 든 역사를
+                      위하여서 교향악이다. 가진 할지니, 살았으며, 소담스러운
+                      피가 구하지 이상은 힘차게 끓는다. 자신과 노래하며 피에
+                      설산에서 품에 그들의 별과 생의 지혜는 쓸쓸하랴? 천자만홍이
+                      봄날의 하는 이성은 행복스럽고 얼마나 물방아 트고, 것이다.
+                      꽃 있는 것이다.보라, 뼈 열락의 길지 꽃이 끓는다. 어디
+                      현저하게 청춘 말이다.
+                    </p>
+                    <a href="#" class="read-more-btn">리뷰 내용 더보기 >> </a>
+                  </div>
+                  <ul class="review_photo">
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="user-review">
+                <div class="review_top-box">
+                  <h3 class="review_tit">리뷰 제목</h3>
+                  <div class="review_info">
+                    <!-- 별은 아이콘으로 대체 -->
+                    <p class="review_stars">
+                      <span>★</span><span>★</span><span>★</span><span>★</span>
+                      <span>★</span>
+                    </p>
+                    <!-- 별은 아이콘으로 대체 -->
+                    <span class="review_product-info"
+                      >구매상품명과 옵션 내용</span
+                    >
+                    <span class="review_writing-time">2022.04.15 00:00:00</span>
+                  </div>
+                </div>
+
+                <div class="review_detail">
+                  <div class="review_txt">
+                    <p>
+                      테스트 글/// 커다란 지혜는 영원히 앞이 군영과 청춘에서만
+                      곳으로 실로 쓸쓸한 철환하였는가? 역사를 우리의 용감하고
+                      이상 뿐이다. 관현악이며, 이상, 희망의 피는 이것이야말로
+                      철환하였는가? 옷을 긴지라 싹이 사막이다. 못할 피어나는
+                      산야에 찾아다녀도, 이것을 우리 인간의 반짝이는 행복스럽고
+                      끓는다. 창공에 노년에게서 위하여, 가치를 든 역사를
+                      위하여서 교향악이다. 가진 할지니, 살았으며, 소담스러운
+                      피가 구하지 이상은 힘차게 끓는다. 자신과 노래하며 피에
+                      설산에서 품에 그들의 별과 생의 지혜는 쓸쓸하랴? 천자만홍이
+                      봄날의 하는 이성은 행복스럽고 얼마나 물방아 트고, 것이다.
+                      꽃 있는 것이다.보라, 뼈 열락의 길지 꽃이 끓는다. 어디
+                      현저하게 청춘 말이다.
+                    </p>
+                    <a href="#" class="read-more-btn">리뷰 내용 더보기 >> </a>
+                  </div>
+                  <ul class="review_photo">
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                    <li>
+                      <img src="img/product-img.jfif" alt="임시 이미지" />
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <!-- //테스트  -->
+            </div>
+          </section>
+
+          <section class="product-qna" id="qna">
+            <div class="tit-box">
+              <h2 class="section-tit">상품문의</h2>
+              <p class="section-tit-des">
+                - 문의 혹은 주문이 많을 경우 답에 다소 시간이 지연될 수 있습니다
+              </p>
+              <a href="#" class="write-qna-btn">문의하기</a>
+            </div>
+
+            <article class="qna-box">
+              <div class="user-q">
+                <strong class="qna-badge">질문</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="user-id">user-id</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">언제오나요?</p>
+                </div>
+              </div>
+
+              <div class="saller-a">
+                <strong class="qna-badge">답변</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="saller-name">saller-name</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">
+                    주문하신 제품은 주문일 익일 발송되었습니다.<br />
+                    배송 상세 정보는 마이페이지에서 확인하실 수 있습니다.<br />
+                    감사합니다
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- 테스트 -->
+            <article class="qna-box">
+              <div class="user-q">
+                <strong class="qna-badge">질문</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="user-id">user-id</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">언제오나요?</p>
+                </div>
+              </div>
+
+              <div class="saller-a">
+                <strong class="qna-badge">답변</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="saller-name">saller-name</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">
+                    주문하신 제품은 주문일 익일 발송되었습니다.<br />
+                    배송 상세 정보는 마이페이지에서 확인하실 수 있습니다.<br />
+                    감사합니다
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="qna-box">
+              <div class="user-q">
+                <strong class="qna-badge">질문</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="user-id">user-id</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">언제오나요?</p>
+                </div>
+              </div>
+
+              <div class="saller-a">
+                <strong class="qna-badge">답변</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="saller-name">saller-name</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">
+                    주문하신 제품은 주문일 익일 발송되었습니다.<br />
+                    배송 상세 정보는 마이페이지에서 확인하실 수 있습니다.<br />
+                    감사합니다
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- 테스트 -->
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">푸터 영역</footer>
+  </body>
+</html>
