@@ -94,8 +94,7 @@ body {
   align-items: center;
   gap: 16px;
 }
-.option .option-name {
-}
+
 .option select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -270,6 +269,47 @@ button.count_plus-btn {
 .tit-box .section-tit {
   font-size: 1.5rem;
   letter-spacing: 0.6px;
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  margin-top: 40px;
+}
+
+.pager .btn-grp {
+}
+.pager .btn-grp button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+}
+.pager .btn-grp button:hover {
+  background-color: #ddd;
+}
+
+.pager ul {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pager ul li {
+  text-align: center;
+  border-radius: 4px;
+}
+
+.pager ul li a {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+.pager ul li:hover a {
+  text-decoration: underline;
 }
 /* ------------------------------------------//리뷰 && 문의 공통 */
 
