@@ -4,66 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header</title>
-    <link rel="stylesheet" href="./header.style.css" />
+    <title>common header</title>
+    <link rel="stylesheet" href="../new/header_style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
     <script src="https://kit.fontawesome.com/08d1af579d.js" crossorigin="anonymous"></script>
-    <script src="./header.js"></script>
 </head>
 <body>
-    <div id="container">
-        <div class="renewal-header">
-            <header id=" header">
-                <section>
-                    <div class="header_container">
-                        <div class="menu-dropdown">
-                            <div class="menu-dropdown-btn">
-                                <div menu-btn><i class="fa fa-bars"><br>카테고리</i></div>
-                            </div>
-                        </div>
-                        <h1>
-                            <a href="header.html" title="Myshop">
-                                <img src="./logo/logosmall2.png" width="300" height="100" alt="Myshop로고">
-                            </a> 
-                        </h1>
-                        <form action="https://search.naver.com/search.naver">
-                            <div class="search">
-                                <input type="text" name="query" value="">
-                                <button type="submit">검색</button>
-                            </div>
-                        </form>
-                        <select id="seachCategories" class="search_category_filter">
-                            <option value="all" selected="selected">전체</option>
-                            <option value="fashon">패션의류</option>
-                            <option value="beauty">뷰티</option>
-                            <option value="necessities">생활용품</option>
-                            <option value="kitchen">주방용품</option>
-                        </select>
-                    </div>
-                </section>
-                <nav class="navbar">
-                    <a href="#">Myshop</a>
-                    <ul class="navbar_menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">패션의류</a></li>
-                        <li><a href="#">뷰티</a></li>
-                        <li><a href="#">생활용품</a></li>
-                        <li><a href="#">주방용품</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-
-                    <ul class="navbar_icons">
-                        <i class="fab fa-twitter"></i>
-                        <i class="fa fa-instagram"></i>
-
-                    </ul>
-
-                   <a href="#" class="navbar_toogleBtn">
-                       <i class="fa fa-bars"></i>
-                   </a>
-
-                </nav>
-            </header>
-
+    <div class="top">
+        <div class="container">
+            <ul class="top-menu">
+            <li class="sometimes"><a href="#"><p>즐겨찾기</p></a></li>
+            <li class="test"><a href="#"><p>회원가입</p></a></li>
+            <li class="test"><a href="#"><p>로그인</p></a></li>
+            </ul>
+        <heaer>
+            <div class="logo"><img src="../logo/logosmall2.png" alt="logo" width="250" height="100"></div>
+            <div class="search">
+                <input type="text" placeholder="검색어 입력">
+                <button>검색</button> 
+            </div>
+            <div class="icon">
+                <a href="#"><div class="Mypage"><i class="fa fa-user"></i></div>Mypage</a>
+                <a href="#"><div class="cart"><i class="fa fa-shopping-cart"></i></div>Cart</a>
+            </div>
+            
+        </heaer>
+        
         </div>
     </div>
 </body>
