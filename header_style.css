@@ -2,6 +2,7 @@
 .container {
     margin: 0 auto;
     width: 1024px;
+    
 }
 .top-menu .sometimes:hover p {
     color: darkgray;
@@ -14,13 +15,16 @@ margin-top: -15px;
 
 .top {
     background-color: ghostwhite;
-    position: relative;
+    
     left: 0;
     padding: 0;
     width: 100%;
     height: 20px;
     padding-top: 7px;
-
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
 }
 .top p {
     font-size: 12px;
@@ -57,7 +61,8 @@ margin-top: -15px;
     border: 1px solid #1b5ac2;
     background: #ffffff;
     margin-top: -4em;
-    margin-left: 20em;
+    margin-left: 19em;
+    cursor: auto;
 }
 .search > input{
     font-size: 16px;
@@ -78,7 +83,7 @@ button{
 }
 
 .icon {
-    font-size:30px;
+    font-size:28px;
     
     float:right;
     margin-right: 20px;
@@ -86,6 +91,78 @@ button{
     display:flex;
     justify-content:column;
     text-decoration: none;
-
+    margin-top: -1.5em; 
 }
+
+.icon a {
+    color: navy;
+}
+
+.Mypage {
+    margin-left: 8em;
+}
+
+.cart {
+    margin-left: 25px;
+}
+
+.fa:hover {
+    color: red;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.menu {
+    width: 970px;
+    overflow: hidden;
+    padding: 8px;
+    margin:35px;
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    
+}
+  
+.menu > li {
+    width: 20%; /*20*5=100%*/
+    float: left;
+    
+    background-color: #5778ff;
+    width: 100%;
+    text-align: center;
+    padding-left: 15px;
+    line-height: 40px;
+    background-color: #5778ff;
+    text-decoration:none;
+}
+  
+.menu a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+  
+.submenu > li {
+    line-height: 50px;
+    background-color: #94a9ff;
+}
+  
+.submenu {
+    height: 0; /*ul의 높이를 안보이게 처리*/
+    overflow: hidden;
+}
+
+.menu > li:hover {
+    background-color: #94a9ff;
+    transition-duration: 0.5s;
+}
+.menu > li:hover .submenu {
+    height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+    transition-duration: 1s;
+}
+
+
+  
+
+
 
