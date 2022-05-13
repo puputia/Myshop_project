@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      button {
+        cursor: pointer;
+      }
+
+      .open-btn {
+        margin: 50px;
+        font-size: 3rem;
+      }
+      .review-modal {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999999;
+
+        justify-content: center;
+        align-items: center;
+
+        display: none;
+      }
+
+      .review-modal .content-box {
+        padding: 1%;
+        max-width: 800px;
+        padding: 2% 4%;
+        border-radius: 24px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+
+        position: relative;
+      }
+      .review-modal .content-box button {
+        position: absolute;
+
+        width: 50px;
+        height: 50px;
+        border: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        font-size: 0;
+      }
+
+      .review-modal .content-box button:active {
+        outline: 2px solid lightblue;
+      }
+
+      .review-modal .prev-btn,
+      .review-modal .next-btn {
+        top: calc(50% - 25px);
+      }
+      .review-modal .prev-btn {
+        left: 20px;
+        background-image: url(img/ico_prev-btn.png);
+      }
+      .review-modal .next-btn {
+        right: 20px;
+        background-image: url(img/ico_next-btn.png);
+      }
+      .review-modal .close-btn {
+        top: 20px;
+        right: 20px;
+        background-image: url(img/ico_close-btn.png);
+      }
+
+      .review-modal .section-tit {
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #ddd;
+      }
+      .review-modal .photo-box {
+        width: 100%;
+      }
+
+      .review-modal .photo-box .now-photo {
+        margin: 0 auto;
+        width: 600px;
+        height: 600px;
+        background-color: #333;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .review-modal .photo-box .now-photo img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+      .review-modal .photo-box ul {
+        width: 100%;
+        display: flex;
+
+        margin-top: 16px;
+      }
+      .review-modal .photo-box ul li {
+        width: 72px;
+        height: 72px;
+
+        border: 1px solid#ccc;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        cursor: pointer;
+      }
+
+      .review-modal .photo-box ul li:hover {
+        outline: 2px solid #000;
+      }
+
+      .review-modal .photo-box ul li ~ li {
+        margin-left: 8px;
+      }
+
+      .review-modal .photo-box ul li img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="more()" class="open-btn">보기</button>
+    <div class="review-modal" id="modal">
+      <div class="content-box">
+        <button class="prev-btn">이전 사진 보기</button>
+        <button class="next-btn">다음 사진 보기</button>
+        <button onclick="closeModal()" class="close-btn">닫기</button>
+        <h2 class="section-tit">리뷰제목</h2>
+        <div class="photo-box">
+          <div class="now-photo">
+            <!-- <img src="img/height-long-test.jpg" alt="1" /> -->
+            <img src="img/width-long-test.jpg" alt="1" />
+          </div>
+          <ul>
+            <li><img src="img/width-long-test.jpg" alt="1" /></li>
+            <li><img src="img/height-long-test.jpg" alt="2" /></li>
+            <li><img src="img/product-img.jfif" alt="3" /></li>
+            <li><img src="img/product-img.jfif" alt="4" /></li>
+            <li><img src="img/product-img.jfif" alt="5" /></li>
+            <li><img src="img/product-img.jfif" alt="6" /></li>
+            <li><img src="img/product-img.jfif" alt="7" /></li>
+            <li><img src="img/product-img.jfif" alt="8" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      const morePhoto = document.getElementById("modal");
+      function more() {
+        morePhoto.style.display = "flex";
+        console.log("열기");
+      }
+      function closeModal() {
+        morePhoto.style.display = "none";
+        console.log("닫기");
+      }
+    </script>
+  </body>
+</html>
