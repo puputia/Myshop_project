@@ -147,8 +147,8 @@
     <button onclick="more()" class="open-btn">보기</button>
     <div class="review-modal" id="modal">
       <div class="content-box">
-        <button class="prev-btn">이전 사진 보기</button>
-        <button class="next-btn">다음 사진 보기</button>
+        <button class="prev-btn imageSliderBtn">이전 사진 보기</button>
+        <button class="next-btn imageSliderBtn">다음 사진 보기</button>
         <button onclick="closeModal()" class="close-btn">닫기</button>
         <h2 class="section-tit">리뷰제목</h2>
         <div class="photo-box">
@@ -179,6 +179,49 @@
         morePhoto.style.display = "none";
         console.log("닫기");
       }
+
+      const photoList = document.querySelectorAll(".photo-box ul li");
+      const nowPhoto = document.querySelector(".now-photo img");
+      const imageSliderBtn = document.querySelectorAll(".imageSliderBtn");
+      let photoIndexNum = 0;
+
+      function changeNowImage() {
+        const thisAttr = this.querySelector("img").getAttribute("src");
+        nowPhoto.setAttribute("src", thisAttr);
+
+        photoIndexNum = Array.from(photoList).indexOf(this);
+      }
+
+      function slideImage() {
+        const direction = Array.from(imageSliderBtn).indexOf(this);
+
+        if (direction === 0) {
+          if (photoIndexNum === 0) photoIndexNum = photoList.length;
+          photoIndexNum--;
+          console.log(photoIndexNum);
+
+          const thisAttr = photoList[photoIndexNum]
+            .querySelector("img")
+            .getAttribute("src");
+          nowPhoto.setAttribute("src", thisAttr);
+        } else {
+          photoIndexNum++;
+          if (photoIndexNum === photoList.length) photoIndexNum = 0;
+
+          const thisAttr = photoList[photoIndexNum]
+            .querySelector("img")
+            .getAttribute("src");
+          nowPhoto.setAttribute("src", thisAttr);
+        }
+      }
+
+      imageSliderBtn.forEach((btn) => {
+        btn.addEventListener("click", slideImage);
+      });
+
+      photoList.forEach((photo) => {
+        photo.addEventListener("click", changeNowImage);
+      });
     </script>
   </body>
 </html>

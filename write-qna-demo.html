@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8bcc305d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/write-qna.css" />
+    <title>상품 상세</title>
+  </head>
+  <body>
+    <button onclick="more()" class="open-btn">문의작성</button>
+    <div class="write-qna" id="writeQna">
+      <div class="content-box">
+        <button onclick="closeLayer()" class="close-btn">닫기</button>
+        <h2 class="section-tit">문의하기</h2>
+
+        <div class="form-wrap">
+          <form action="#" method="post">
+            <fieldset>
+              <legend>문의하기</legend>
+
+              <div class="qna-product">
+                <h3 class="qna-tit">문의 상품 선택</h3>
+
+                <div class="product_option-box">
+                  <label class="option">
+                    <p class="option-name">@test</p>
+                    <!-- name 옵션데이터이름을 넣어주세요 -->
+                    <select name="size">
+                      <option>사이즈를 선택하세요</option>
+                      <option value="option-1">옵션명1</option>
+                      <option value="option-2">옵션명2</option>
+                      <option value="option-3">옵션명3</option>
+                      <option value="option-4">옵션명4</option>
+                      <option value="option-5">옵션명5</option>
+                    </select>
+                  </label>
+
+                  <label class="option">
+                    <p class="option-name">@test</p>
+                    <!-- name 옵션데이터이름을 넣어주세요 -->
+                    <select name="size">
+                      <option>사이즈를 선택하세요</option>
+                      <option value="option-1">옵션명1</option>
+                      <option value="option-2">옵션명2</option>
+                      <option value="option-3">옵션명3</option>
+                      <option value="option-4">옵션명4</option>
+                      <option value="option-5">옵션명5</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+
+              <div class="qna-content">
+                <h3 class="qna-tit">문의 내용</h3>
+                <textarea
+                  name="문의내용"
+                  required
+                  placeholder="문의내용을 남겨주세요"
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <input type="submit" value="문의남기기" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const writeQnaBtn = document.getElementById("writeQna");
+      function more() {
+        writeQnaBtn.style.display = "flex";
+        console.log("열기");
+      }
+      function closeLayer() {
+        writeQnaBtn.style.display = "none";
+        console.log("닫기");
+      }
+    </script>
+  </body>
+</html>

@@ -53,8 +53,9 @@
             <div class="order_tit-box">
               <h2 class="product-name">@product.name</h2>
               <p class="review-total">
-                <!-- 별 넣을곳 -->
-                <span class="total-count">1개 상품평</span>
+                <span class="total_rating">
+                  <span class="rating_score"></span> </span
+                ><span class="total-count">1개 상품평</span>
               </p>
             </div>
 
@@ -68,7 +69,7 @@
 
             <div class="product_option-box">
               <div class="option">
-                <p class="option-name">@option.name</p>
+                <p class="option-name">@test</p>
                 <!-- name 옵션데이터이름을 넣어주세요 -->
                 <select name="size">
                   <option>사이즈를 선택하세요</option>
@@ -161,12 +162,9 @@
                 <div class="review_top-box">
                   <h3 class="review_tit">리뷰 제목</h3>
                   <div class="review_info">
-                    <!-- 별은 아이콘으로 대체 -->
                     <p class="review_stars">
-                      <span>★</span><span>★</span><span>★</span><span>★</span>
-                      <span>★</span>
+                      <span class="star_rating"></span>
                     </p>
-                    <!-- 별은 아이콘으로 대체 -->
                     <span class="review_product-info"
                       >구매상품명과 옵션 내용</span
                     >
@@ -178,6 +176,13 @@
                   <div class="review_txt">
                     <p>
                       테스트 글/// 커다란 지혜는 영원히 앞이 군영과 청춘에서만
+                      곳으로 실테스트 글/// 커다란 지혜는 영원히 앞이 군영과
+                      청춘에서만 곳으로 실테스트 글/// 커다란 지혜는 영원히 앞이
+                      군영과 청춘에서만 곳으로 실테스트 글/// 커다란 지혜는
+                      영원히 앞이 군영과 청춘에서만 곳으로 실테스트 글/// 커다란
+                      지혜는 영원히 앞이 군영과 청춘에서만 곳으로 실테스트 글///
+                      커다란 지혜는 영원히 앞이 군영과 청춘에서만 곳으로
+                      실테스트 글/// 커다란 지혜는 영원히 앞이 군영과 청춘에서만
                       곳으로 실
                     </p>
 
@@ -267,6 +272,66 @@
               </p>
               <a href="#" class="write-qna-btn">문의하기</a>
             </div>
+
+            <!-- 문의 작성 창 -->
+            <div class="write-qna" id="writeQna">
+              <div class="content-box">
+                <button onclick="closeLayer()" class="close-btn">닫기</button>
+                <h2 class="section-tit">문의하기</h2>
+
+                <div class="form-wrap">
+                  <form action="#" method="post">
+                    <fieldset>
+                      <legend>문의하기</legend>
+
+                      <div class="qna-product">
+                        <h3 class="qna-tit">문의 상품 선택</h3>
+
+                        <div class="product_option-box">
+                          <label class="option">
+                            <p class="option-name">@test</p>
+                            <!-- name 옵션데이터이름을 넣어주세요 -->
+                            <select name="size">
+                              <option>사이즈를 선택하세요</option>
+                              <option value="option-1">옵션명1</option>
+                              <option value="option-2">옵션명2</option>
+                              <option value="option-3">옵션명3</option>
+                              <option value="option-4">옵션명4</option>
+                              <option value="option-5">옵션명5</option>
+                            </select>
+                          </label>
+
+                          <label class="option">
+                            <p class="option-name">@test</p>
+                            <!-- name 옵션데이터이름을 넣어주세요 -->
+                            <select name="size">
+                              <option>사이즈를 선택하세요</option>
+                              <option value="option-1">옵션명1</option>
+                              <option value="option-2">옵션명2</option>
+                              <option value="option-3">옵션명3</option>
+                              <option value="option-4">옵션명4</option>
+                              <option value="option-5">옵션명5</option>
+                            </select>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="qna-content">
+                        <h3 class="qna-tit">문의 내용</h3>
+                        <textarea
+                          name="문의내용"
+                          required
+                          placeholder="문의내용을 남겨주세요"
+                        ></textarea>
+                      </div>
+                    </fieldset>
+
+                    <input type="submit" value="문의남기기" />
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- //문의 작성 창 -->
 
             <article class="qna-box">
               <div class="user-q">

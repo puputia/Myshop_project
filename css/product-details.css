@@ -7,13 +7,18 @@ button {
   cursor: pointer;
 }
 
-.header {
+.header,
+.footer {
   width: 100%;
   height: 160px;
   line-height: 160px;
   font-size: 30px;
   background-color: #eee;
   text-align: center;
+}
+
+.footer {
+  margin-top: 80px;
 }
 
 .container .product_top-info {
@@ -72,14 +77,35 @@ button {
   font-size: 18px;
 }
 
-.order_tit-box .review-total i ~ i {
+.order_tit-box .review-total {
   margin-left: 4px;
+
+  height: 24px;
 }
+
+.order_tit-box .review-total span {
+  display: inline-block;
+  height: 100%;
+}
+
+.order_tit-box .review-total .total_rating {
+  width: 120px;
+  background: url(../img/ico_star-grey.png) repeat-x left center;
+}
+
+.order_tit-box .review-total .total_rating .rating_score {
+  width: 90%;
+  background: url(../img/ico_star-yellow.png) repeat-x left center;
+}
+
 .order_tit-box .review-total .total-count {
   color: var(--acent-color);
   font-weight: bold;
   font-size: 14px;
-  margin-left: 4px;
+  margin-left: 8px;
+  background-color: #fff;
+
+  vertical-align: top;
 }
 
 .product_order .product_price {
@@ -96,8 +122,13 @@ button {
 
 .product_order .product_option-box .option {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: 16px;
+}
+
+.product_order .product_option-box .option ~ .option {
+  margin-top: 16px;
 }
 
 .option select {
@@ -207,12 +238,14 @@ button.count_plus-btn {
 }
 
 .container .tab-contents section ~ section {
-  padding-top: 160px;
+  margin-top: 80px;
+  padding-top: 80px;
 }
 
 .container .tab-contents .product_tab-titles {
   position: sticky;
   top: 0;
+  z-index: 888;
 }
 .product_tab-titles ul {
   display: flex;
@@ -342,9 +375,20 @@ button.count_plus-btn {
 .review_top-box .review_info {
   color: #999;
 }
-.review_top-box .review_info p {
+
+.review_top-box .review_info .review_stars {
+  width: 120px;
   margin-top: 4px;
+  background: url(../img/ico_star-grey.png) repeat-x center;
 }
+
+.review_stars .star_rating {
+  display: block;
+  width: 90%;
+  height: 24px;
+  background: url(../img/ico_star-yellow.png) repeat-x left center;
+}
+
 .review_top-box .review_info .review_writing-time {
   font-size: 0.825rem;
 }
@@ -361,9 +405,9 @@ button.count_plus-btn {
 
 .user-review .review_preview .review_txt {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
+  row-gap: 16px;
 }
 
 .review_txt p {
@@ -377,6 +421,11 @@ button.count_plus-btn {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   word-wrap: break-word;
+}
+
+.review_txt p.open {
+  height: auto;
+  display: block;
 }
 
 .review_txt .review_btn-group {
@@ -422,7 +471,7 @@ button.count_plus-btn {
 }
 
 .review_preview .review_photo {
-  width: 150px;
+  min-width: 150px;
   height: 150px;
   border: 1px solid #ddd;
   box-sizing: border-box;
@@ -469,7 +518,10 @@ button.count_plus-btn {
 }
 
 .review_preview .review_photo img {
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* ---------------------- 리뷰 사진더보기 ----------------------*/
@@ -598,6 +650,139 @@ button.count_plus-btn {
 /* ------------------------- //리뷰 ----------------------- */
 
 /* ------------------------- 문의 ----------------------- */
+
+/* 문의 작성 창---------------------------------- */
+
+.product-qna .write-qna {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+}
+
+.write-qna .content-box {
+  width: 400px;
+  padding: 32px;
+  border-radius: 24px;
+
+  background-color: #fff;
+  border: 2px solid #ddd;
+
+  position: relative;
+}
+
+.write-qna button:active,
+input[type="submit"]:active,
+.write-qna .close-btn:hover {
+  outline: 2px solid lightblue;
+}
+
+.write-qna .close-btn {
+  position: absolute;
+
+  width: 32px;
+  height: 32px;
+  border: 0;
+  font-size: 0;
+
+  top: 40px;
+  right: 40px;
+  background: transparent url(../img/ico_close-btn.png) no-repeat center;
+}
+
+.write-qna .section-tit {
+  margin-bottom: 32px;
+  padding: 8px 0;
+  border-radius: 8px;
+  background-color: #eee;
+
+  text-align: center;
+}
+
+.write-qna .form-wrap fieldset {
+  border: none;
+}
+
+.write-qna .form-wrap fieldset > div ~ div {
+  margin-top: 32px;
+}
+
+.write-qna .form-wrap .qna-tit {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.write-qna .form-wrap legend {
+  font-size: 0;
+}
+.write-qna .product_option-box .option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.write-qna .product_option-box .option ~ .option {
+  margin-top: 16px;
+}
+
+.write-qna .option select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  flex-grow: 1;
+  padding: 12px;
+  border-radius: 4px;
+  outline: none;
+}
+.write-qna .option select:focus {
+  border: 1px solid var(--acent-color);
+  outline: 1px solid var(--acent-color);
+}
+
+.write-qna .qna-content textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px 16px;
+  box-sizing: border-box;
+}
+
+.write-qna .qna-content textarea:focus {
+  outline: none;
+}
+
+.write-qna input[type="submit"] {
+  display: block;
+  width: 120px;
+  line-height: 48px;
+  margin: 48px auto 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: -0.6px;
+}
+
+.write-qna input[type="submit"]:hover {
+  background-color: var(--acent-color);
+  color: #fff;
+}
+/* //문의 작성 창---------------------------------- */
 
 .product-qna .qna-box {
   margin-bottom: 16px;
