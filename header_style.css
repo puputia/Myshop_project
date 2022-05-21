@@ -1,16 +1,21 @@
+.header{
+   
+    display:flex;
+    justify-content: row; 
+    margin-top: 20px;
+}
 .header-container{
     margin: 0 auto;
     width: 1024px;
     
+    
+}
+.logo{
+    margin-top: 10px;
 }
 
-.top-menu .sometimes:hover p {
+.top-menu :hover p {
     color: darkgray;
-}
-
-
-.sometimes {
-margin-top: -20px;
 }
 
 .test{
@@ -18,12 +23,8 @@ margin-top: -20px;
 }
 
 .top {
-    
-    
     background-color: ghostwhite;
     width: 100%;
-    
-    
     display:flex;
     flex-direction: row;
 }
@@ -39,35 +40,38 @@ margin-top: -20px;
     display: inline-block;
 }
 
-
-
-
 .top-menu .test:hover p {
     color: darkgray;
 }
 
 
-
-.search{
-    height: 40px;
-    width: 400px;
-    border: 1px solid #1b5ac2;
-    background: #ffffff;
+.search {
+    display:flex;
+    justify-items: center; 
+    flex-direction:center;
     margin-top: -4em;
-    margin-left: 18em;
-    margin-bottom:2px;
+    margin-left: 22em;
     cursor: auto;
-   
+    height: 40px;
+    width: 380px;
+    border: solid 1px #cccccc;
 }
+
+.select-space{
+    border:none;
+}
+
 .search > input{
     font-size: 16px;
-    width: 325px;
-    padding: 10px;
+    border :solid #cccccc 1px;
+    padding: 9px;
     border: 0px;
-    outline: none;
+    
     float: left;
 }
+
 button{
+    margin-left:15px;
     width: 50px;
     height: 100%;
     border: 0px;
@@ -76,21 +80,30 @@ button{
     float: right;
     color: #ffffff;
 }
+button:hover{
+    color:white;
+    background-color: pink;
+}
 
 .icon {
-    font-size:28px;
-    
+    font-size:22px;
     float:right;
-    margin-right: 20px;
-    
+   
+    text-align: center;
     display:flex;
-    justify-content:column;
+    flex-direction: rows;
+    justify-content:row;
     text-decoration: none;
-    margin-top: -1.5em; 
+    margin-top: -2.2em; 
 }
 
 .icon a {
-    color: navy;
+    color: #1b5ac2;
+}
+
+.icon-text {
+    text-align: center;
+    font-size: 18px;
 }
 
 .Mypage {
@@ -107,55 +120,88 @@ button{
     cursor: pointer;
 }
 
-.menu {
-    width: 100%;
-    overflow: hidden;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-top: 35px;
 
+
+nav> ul,ol,li {
     list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-  
-.menu > li {
-    width: 20%; /*20*5=100%*/
-    float: left;
     
-    background-color: #5778ff;
-    width: 100%;
-    text-align: center;
-    padding-left: 15px;
-    line-height: 40px;
-    background-color: #5778ff;
-    text-decoration:none;
-}
-  
-.menu a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration-line: none;
-}
-  
-.submenu > li {
-    line-height: 50px;
-    background-color: #94a9ff;
-}
-  
-.submenu {
-    height: 0; /*ul의 높이를 안보이게 처리*/
-    overflow: hidden;
 }
 
-.menu > li:hover {
-    background-color: #94a9ff;
-    transition-duration: 0.5s;
+
+
+
+nav {
+    width: 100%;
+    background-color: #1862b0;
+    text-align: center;
+    margin-top: 23px;
+   
+    
 }
-.menu > li:hover .submenu {
-    height: 250px; /*서브메뉴 li한개의 높이 50*5*/
-    transition-duration: 1s;
+
+nav > * {
+    color:white;
 }
+.submenu{
+    text-align: center;
+    align-items: center;
+
+}
+
+nav > ul.menu-hedaer {
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+}
+
+/* float 해제하기 */
+/* 자식요소가 float가 되어있으면 부모요소는 자식의 높이를 읽지 못합니다. */
+nav > ul.menu-hedaer:after {
+    content: "";
+    display: block;
+    clear: both;
+} 
+
+nav > ul.menu-hedaer > li {
+    float: left;
+    width: 150px;
+    padding: 14px 0;
+
+    /* position:absolute가 위치를 잡는 기준점을 설정합니다. */
+    position: relative;
+}
+
+nav > ul.menu-hedaer > li:hover > a {
+    font-weight: bold;
+}
+
+nav > ul.menu-hedaer > li ul.submenu {
+    background-color: #5897da;
+    width: 100%; /*150px*/
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+
+/* 하단 content가 밀리지 않기 위해서는 position:absolut속성이 필요합니다. */
+    position: absolute;
+    left: 0;
+    top: 49px;
+}
+
+nav > ul.menu-hedaer > li:hover .submenu {
+    padding: 14px 0;
+    height: 185px;
+    
+}
+
+ul.submenu li {
+    line-height: 2.4;
+}
+ul.submenu li a:hover {
+    text-decoration: underline;
+}
+
+
 
 
   
