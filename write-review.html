@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8bcc305d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/write-review.css" />
+    <title>마이페이지 | 리뷰 쓰기</title>
+  </head>
+  <body>
+    <!-- 대치필요 -->
+    <header class="header">헤더영역</header>
+    <!-- //대치필요 -->
+    <div class="container">
+      <h2 class="form-title">리뷰 작성하기</h2>
+      <div class="write-review-wrap">
+        <div class="product-info">
+          <div class="product-thum">
+            <img src="img/width-long-test.jpg" alt="임시 썸네일" />
+          </div>
+          <h3 class="product-name">
+            제품명 길게 테스트 문장을 적습니다
+            <p class="option-name">사이즈 230 / 옐로우 네이비</p>
+          </h3>
+        </div>
+
+        <form action="#" method="post">
+          <fieldset class="star_rating">
+            <legend>별점주기</legend>
+            <h3 class="stars-title">상품은 괜찮았나요?</h3>
+            <ul class="stars">
+              <li>
+                <label for="star_1">1점</label>
+                <input type="radio" id="star_1" value="star_1" />
+              </li>
+              <li>
+                <label for="star_2">2점</label>
+                <input type="radio" id="star_2" value="star_2" />
+              </li>
+              <li>
+                <label for="star_3">3점</label>
+                <input type="radio" id="star_3" value="star_3" />
+              </li>
+              <li>
+                <label for="star_4">4점</label>
+                <input type="radio" id="star_4" value="star_4" />
+              </li>
+              <li>
+                <label for="star_5">5점</label>
+                <input type="radio" id="star_5" value="star_5" />
+              </li>
+            </ul>
+
+            <!-- <ul class="stars">
+              <li>
+                <input type="radio" id="star_5" value="star_5" />
+                <label for="star_5"><span>5점</span></label>
+              </li>
+              <li>
+                <input type="radio" id="star_4" value="star_4" />
+                <label for="star_4"><span>4점</span></label>
+              </li>
+              <li>
+                <input type="radio" id="star_3" value="star_3" />
+                <label for="star_3"><span>3점</span></label>
+              </li>
+              <li>
+                <input type="radio" id="star_2" value="star_2" />
+                <label for="star_2"><span>2점</span></label>
+              </li>
+              <li>
+                <input type="radio" id="star_1" value="star_1" />
+                <label for="star_1"><span>1점</span></label>
+              </li>
+            </ul> -->
+          </fieldset>
+
+          <fieldset class="write-my-review">
+            <legend>리뷰 내용 작성</legend>
+            <label>
+              <h3 class="input-name">제목</h3>
+              <input
+                type="text"
+                name="review-title"
+                required
+                placeholder="제목"
+              />
+            </label>
+
+            <label>
+              <h3 class="input-name">내용</h3>
+              <textarea
+                name="review-context"
+                required
+                placeholder="리뷰를 적어주세요!"
+              ></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="upload-photo">
+            <legend>리뷰 사진 등록</legend>
+            <div class="add-photo">
+              <label for="uploadPhoto">사진 첨부하기</label>
+              <input
+                type="file"
+                name="review-images"
+                accept=".jpg,.png,.jpeg"
+                multiple
+                id="uploadPhoto"
+              />
+              <p class="upload-notify">
+                *사진은 최대 -개까지 등록할 수 있습니다.
+              </p>
+            </div>
+            <ul>
+              <li>업로드한 파일 미리보기</li>
+              <li>업로드한 파일 미리보기</li>
+              <li>업로드한 파일 미리보기</li>
+              <li>업로드한 파일 미리보기</li>
+              <li>업로드한 파일 미리보기</li>
+            </ul>
+          </fieldset>
+          <div class="form-btn-wrap">
+            <button class="close-btn">취소</button>
+            <input type="submit" value="등록" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 대치필요 -->
+    <footer class="footer">푸터 영역</footer>
+    <!-- //대치필요 -->
+    <script src="js/tabMove.js"></script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 :root {
-  --text-color: #333;
+  /* --text-color: #333; */
   --background-color: #263343;
   --acent-color: lightblue;
   --section-margin: 120px;
@@ -22,7 +22,7 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--text-color);
+  /* color: var(--text-color); */
 }
 
 .inner {
@@ -33,4 +33,11 @@ a {
 
 button {
   cursor: pointer;
+}
+
+fieldset {
+  border: none;
+}
+legend {
+  font-size: 0;
 }

@@ -1,3 +1,4 @@
+/* ---------임시 */
 .header,
 .footer {
   width: 100%;
@@ -10,4 +11,226 @@
 
 .footer {
   margin-top: 80px;
+}
+/* ---------//임시 */
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 60px auto;
+}
+
+.container .form-title {
+  text-align: center;
+
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.container .write-review-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.write-review-wrap .product-info {
+  margin-top: 40px;
+  width: 400px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.product-info .product-thum {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-info .product-thum img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.product-info .product-name {
+  word-break: keep-all;
+  font-size: 1rem;
+}
+.product-info .product-name .option-name {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #999;
+}
+
+.write-review-wrap form > fieldset {
+  margin-top: 24px;
+}
+
+.write-review-wrap form .star_rating {
+  background-color: rgb(246, 246, 246);
+  padding: 24px;
+  border-radius: 16px;
+}
+.star_rating .stars-title {
+  text-align: center;
+}
+.star_rating input {
+  display: none;
+}
+.star_rating .stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  position: relative;
+}
+
+.star_rating .stars li {
+  background: url(../img/ico_star-grey.png) repeat-x left center/ auto 100%;
+}
+.star_rating .stars li:hover {
+  background: url(../img/ico_star-yellow.png) repeat-x left center/ auto 100%;
+}
+
+.star_rating .stars label {
+  width: 32px;
+  height: 32px;
+  display: block;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.write-review-wrap form .write-my-review {
+}
+.write-my-review label {
+  line-height: 18px;
+  font-size: 18px;
+
+  display: block;
+  /* display: flex;
+  align-items: flex-start;
+  gap: 16px; */
+}
+
+.write-my-review label:last-child {
+  margin-top: 32px;
+}
+
+.write-my-review label .input-name {
+  margin-bottom: 16px;
+}
+.write-my-review label input,
+.write-my-review label textarea {
+  width: 532px;
+  padding: 16px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #666;
+  box-sizing: border-box;
+}
+
+.write-my-review label input {
+  font-size: 1.2rem;
+}
+
+.write-my-review label textarea {
+  min-width: 532px;
+  max-width: 532px;
+  height: 240px;
+}
+
+.write-review-wrap form .upload-photo {
+}
+
+.upload-photo {
+}
+
+.upload-photo .add-photo label {
+  display: block;
+  padding: 16px;
+  border-radius: 4px;
+  text-align: center;
+  border: 2px dashed #ddd;
+
+  font-size: 1rem;
+  cursor: pointer;
+}
+.upload-photo .add-photo label:hover {
+  border-color: #aaa;
+}
+
+.upload-photo .add-photo input {
+  display: none;
+}
+
+.upload-photo ul {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+.upload-photo ul li {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.upload-photo ul li:hover {
+  outline: 2px solid #999;
+}
+
+.upload-photo ul li img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.upload-photo .upload-notify {
+  font-size: 0.825rem;
+  margin-top: 8px;
+}
+
+.write-review-wrap .form-btn-wrap {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.write-review-wrap .form-btn-wrap input[type="submit"],
+.write-review-wrap .form-btn-wrap .close-btn {
+  display: block;
+  width: 120px;
+  line-height: 48px;
+
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: -0.6px;
+}
+.write-review-wrap .form-btn-wrap .close-btn {
+  background-color: transparent;
+  border: 2px solid #ddd;
+}
+.write-review-wrap .form-btn-wrap .close-btn:hover {
+  border-color: #999;
+}
+
+.write-review-wrap .form-btn-wrap input[type="submit"] {
+  border: none;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.write-review-wrap .form-btn-wrap input[type="submit"]:hover {
+  background-color: #999;
+  color: #fff;
 }

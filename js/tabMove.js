@@ -4,6 +4,8 @@
 
 const productDetailsTab = document.querySelectorAll(".product_tab-titles li");
 const tabLocate = [];
+const CLASSNAME_ACTIVE = "active";
+
 tabLocate[0] = document.getElementById("details").offsetTop;
 tabLocate[1] = document.getElementById("review").offsetTop;
 tabLocate[2] = document.getElementById("qna").offsetTop;
@@ -17,6 +19,10 @@ productDetailsTab.forEach((tab) => {
       top: tabLocate[indexNum],
       behavior: "smooth",
     });
+    for (let tabname of productDetailsTab) {
+      tabname.classList.remove(CLASSNAME_ACTIVE);
+    }
+    this.classList.add(CLASSNAME_ACTIVE);
   });
 });
 

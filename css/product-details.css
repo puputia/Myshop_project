@@ -272,10 +272,12 @@ button.count_plus-btn {
 .product_tab-titles ul li.active {
   background-color: #fff;
   border-bottom: none;
+  font-weight: bold;
 }
 
 .product_tab-titles ul li a {
   display: block;
+  color: #333;
 }
 
 .container .tab-contents .product-detail {
@@ -709,10 +711,6 @@ input[type="submit"]:active,
   text-align: center;
 }
 
-.write-qna .form-wrap fieldset {
-  border: none;
-}
-
 .write-qna .form-wrap fieldset > div ~ div {
   margin-top: 32px;
 }
@@ -725,9 +723,6 @@ input[type="submit"]:active,
   border-bottom: 1px solid #ddd;
 }
 
-.write-qna .form-wrap legend {
-  font-size: 0;
-}
 .write-qna .product_option-box .option {
   display: flex;
   justify-content: space-between;
