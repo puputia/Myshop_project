@@ -53,46 +53,18 @@ readMoreBtn.forEach((btn) => {
 
 /* ------------------------------ //리뷰더보기 ------------------------------ */
 
-/* const photoList = document.querySelectorAll(".photo-box ul li");
-const nowPhoto = document.querySelector(".now-photo img");
-const imageSliderBtn = document.querySelectorAll(".imageSliderBtn");
-let photoIndexNum = 0;
+/* ------------------------------ 리뷰 쓰기 ------------------------------ */
 
-function changeNowImage() {
-  const thisAttr = this.querySelector("img").getAttribute("src");
-  nowPhoto.setAttribute("src", thisAttr);
-
-  photoIndexNum = Array.from(photoList).indexOf(this);
+function writeReview() {
+  const popUrl = "write-review.html";
+  const popOption =
+    "top=40,left=40,width=520,height=600,resizable=no,location=no";
+  window.open(popUrl, "_new", popOption);
+  console.log("hey");
 }
 
-function slideImage() {
-  const direction = Array.from(imageSliderBtn).indexOf(this);
+/* ------------------------------ //리뷰 쓰기 ------------------------------ */
 
-  if (direction === 0) {
-    if (photoIndexNum === 0) photoIndexNum = photoList.length;
-    photoIndexNum--;
-    console.log(photoIndexNum);
+/* ------------------------------ 사진 등록 ------------------------------ */
 
-    const thisAttr = photoList[photoIndexNum]
-      .querySelector("img")
-      .getAttribute("src");
-    nowPhoto.setAttribute("src", thisAttr);
-  } else {
-    photoIndexNum++;
-    if (photoIndexNum === photoList.length) photoIndexNum = 0;
-
-    const thisAttr = photoList[photoIndexNum]
-      .querySelector("img")
-      .getAttribute("src");
-    nowPhoto.setAttribute("src", thisAttr);
-  }
-}
-
-imageSliderBtn.forEach((btn) => {
-  btn.addEventListener("click", slideImage);
-});
-
-photoList.forEach((photo) => {
-  photo.addEventListener("click", changeNowImage);
-});
- */
+/* ------------------------------ //사진 등록 ------------------------------ */

@@ -312,8 +312,11 @@ button.count_plus-btn {
   padding: 8px 24px;
   border-radius: 4px;
   line-height: 2;
-  font-weight: 600;
   background-color: #fff;
+  border: none;
+
+  font-weight: 600;
+  color: #333;
 
   position: absolute;
   right: 30px;
@@ -723,29 +726,8 @@ input[type="submit"]:active,
   border-bottom: 1px solid #ddd;
 }
 
-.write-qna .product_option-box .option {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-}
-.write-qna .product_option-box .option ~ .option {
+.qna-product .option-name {
   margin-top: 16px;
-}
-
-.write-qna .option select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-
-  flex-grow: 1;
-  padding: 12px;
-  border-radius: 4px;
-  outline: none;
-}
-.write-qna .option select:focus {
-  border: 1px solid var(--acent-color);
-  outline: 1px solid var(--acent-color);
 }
 
 .write-qna .qna-content textarea {
