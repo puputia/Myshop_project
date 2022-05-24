@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    text-align:center;
+    
+}
+
+.tit_page {
+    font-family: 'ONE-Mobile-POP';
+    margin-bottom:15px;
+}
+
+.cart-container{
+    margin: 0 auto;
+    width: 1024px;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.logo{
+    text-align:center;
+    border:0px;
+    margin: 20px auto;
+    cursor:pointer;
+    
+}
+
+.logo > img
+{
+    border-top-left-radius: 60%;
+    border-top-right-radius: 60%;
+}
+body{
+	
+	background: linear-gradient(to bottom right, #E3F0FF, #FAFCFF);
+	height: 110vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main{
+	
+	background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px #1687d933;
+}
+
+.content {
+    display:flex;
+    flex-direction: column;
+}
+.quantity {
+    width: 100px;
+    padding:-30px;
+}
+
+.counter{
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.button {
+    border: 0px;
+    font-size:20px;
+}
+.btn{
+	 width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-family: 'Open Sans';
+	font-weight: 900;
+	color: #202020;
+	cursor: pointer;
+    border:none; 
+}
+/* .count{
+	font-size: 20px;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	color: #202020;
+    margin: 10px;
+} */
+
+
+.check-out{
+	margin-top: 10px;
+	width: 8em;
+	height: 40px;
+	border: none;
+	background: linear-gradient(to bottom right, #B8D7FF, #8EB7EB);
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	color: #202020;
+    float:right;
+ }  
+
+table{
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid rgb(252, 211, 211);
+    padding: 10px;
+    
+}
+th{
+    padding: 10px;
+    background-color: lightblue;
+}
+
+
+.goods_tit {
+    font-weight:bold;
+    font-size:18px;
+}
+
+.info {
+    text-align:center;
+}
+
+.s-check{
+    width:80px;
+}
+
+.deselect {
+    margin-top: 10px;
+	width: 8em;
+	height: 40px;
+	border: none;
+	background: linear-gradient(to bottom right, #f0c7ec, #ffa3b6);
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 16px;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	color: #202020;
+    margin-right: 65em;
+}
+
+button {
+    margin: 10px;
+}
+
+.total_price {
+    font-size:20px;
+    font-weight: bold;
+    border: 1px solid #cccc;
+    background-color: whitesmoke;
+    width: 50vh;
+    height:40px;
+    display:flex;
+    justify-content: center;
+    text-align:center;
+    
+}

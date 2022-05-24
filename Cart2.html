@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>장바구니 페이지</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel="stylesheet" href="./Cart2.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+</head>
+<body>
+    <div cart-container>
+        <div class="cart-header">
+            <div class="logo"><img src="./logo/logosmall2.png" alt="logo" width="240" height="100"></div>
+            <div class="tit_page"><h1>장바구니</h1></div>
+            <button class="deselect">선택삭제❌</button>
+        </div>
+        
+        <div class="main">
+            <div class="content">
+                <table>
+                    <tr>
+                        <th><p>전체</p><p>선택</p><input type="checkbox"></th>
+                        
+                        <th>이미지</th>
+                        <th>상품정보</th>
+                        <th>수량</th>
+                        <th>상품금액</th>
+                        <th>합계</th>
+                        <th>취소버튼</th>
+                    </tr>    
+                    <tr>
+                        <td><input type="checkbox" class="s-check"></td>
+                        <td><div class="image-box">
+                            <img src="https://cdn.mindgil.com/news/photo/202005/69245_3202_1851.jpg" alt="바나나" height="120px"/>
+                        </div></td>
+                        <td>
+                            <div class="info">
+                                <div class="goods_tit">델몬트 필리핀 바나나</div>
+                                <div class="detail">금요일 5/27 도착예정</div>
+                            </div>
+                        </td>
+                        <td class="quantity">
+                            <div class="counter">
+                                <button class="btn">+</button>
+                                <div class="count">1</div>
+                                <button class="btn">-</button>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="price">6,960원</div>
+                        </td>  
+                        <td>
+                            <div class="sum">&nbsp;</div>
+                        </td>
+                        <td>
+                            <div class="delete">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg" 
+                                class="ico_delete--3rbOSkZl3A">
+                                <path d="M14.278 1.12l.722.72-6.278 6.28L15 14.397l-.722.722L8 8.841 1.722 15.12 1 14.397l6.278-6.278L1 1.841l.722-.722L8 7.397l6.278-6.278z" 
+                                fill="#BDC0C6"></path></svg>
+                            </div>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="nb[]" value="01"></td>
+                        <td><div class="image-box">
+                            <img src="https://cdn.mindgil.com/news/photo/202005/69245_3202_1851.jpg" alt="바나나" height="120px"/>
+                        </div></td>
+                        <td>
+                            <div class="info">
+                                <div class="goods_tit">델몬트 필리핀 바나나</div>
+                                <div class="detail">금요일 5/27 도착예정</div>
+                            </div>
+                        </td>
+                        <td class="quantity">
+                            <div class="counter">
+                                <button class="btn">+</button>
+                                <div class="count">1</div>
+                                <button class="btn">-</button>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="price">6,960원</div>
+                        </td>
+                        <td>
+                            <div class="sum">&nbsp;</div>
+                        </td>   
+                        <td>
+                            <div class="delete">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg" 
+                                class="ico_delete--3rbOSkZl3A">
+                                <path d="M14.278 1.12l.722.72-6.278 6.28L15 14.397l-.722.722L8 8.841 1.722 15.12 1 14.397l6.278-6.278L1 1.841l.722-.722L8 7.397l6.278-6.278z" 
+                                fill="#BDC0C6"></path></svg>
+                            </div>
+                        </td>    
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="nb[]" value="01"></td>
+                        <td><div class="image-box">
+                            <img src="https://cdn.mindgil.com/news/photo/202005/69245_3202_1851.jpg" alt="바나나" height="120px"/>
+                        </div></td>
+                        <td>
+                            <div class="info">
+                                <div class="goods_tit">델몬트 필리핀 바나나</div>
+                                <div class="detail">금요일 5/27 도착예정</div>
+                            </div>
+                        </td>
+                        <td class="quantity">
+                            <div class="counter">
+                                <button class="btn">+</button>
+                                <div class="count">1</div>
+                                <button class="btn">-</button>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="price">6,960원</div>
+                        </td>
+                        <td>
+                            <div class="sum">&nbsp;</div>
+                        </td>    
+                        <td>
+                            <div class="delete">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg" 
+                                class="ico_delete--3rbOSkZl3A">
+                                <path d="M14.278 1.12l.722.72-6.278 6.28L15 14.397l-.722.722L8 8.841 1.722 15.12 1 14.397l6.278-6.278L1 1.841l.722-.722L8 7.397l6.278-6.278z" 
+                                fill="#BDC0C6"></path></svg>
+                            </div>
+                        </td>  
+
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="nb[]" value="01"></td>
+                        <td><div class="image-box">
+                            <img src="https://cdn.mindgil.com/news/photo/202005/69245_3202_1851.jpg" alt="바나나" height="120px"/>
+                        </div></td>
+                        <td>
+                            <div class="info">
+                                <div class="info">
+                                    <div class="goods_tit">델몬트 필리핀 바나나</div>
+                                    <div class="detail">금요일 5/27 도착예정</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="quantity">
+                            <div class="counter">
+                                <button class="btn">+</button>
+                                <div class="count">1</div>
+                                <button class="btn">-</button>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="price">6,960원</div>
+                        </td> 
+                        <td>
+                            <div class="sum">&nbsp;</div>
+                        </td>     
+                        <td>
+                            <div class="delete">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg" 
+                                class="ico_delete--3rbOSkZl3A">
+                                <path d="M14.278 1.12l.722.72-6.278 6.28L15 14.397l-.722.722L8 8.841 1.722 15.12 1 14.397l6.278-6.278L1 1.841l.722-.722L8 7.397l6.278-6.278z" 
+                                fill="#BDC0C6"></path></svg>
+                            </div>
+                        </td>  
+                    </tr>
+                    
+                    
+                
+                </table>
+               
+                <div class="total_price">총 주문금액 : &nbsp;원 </div>
+                <div><button class="check-out">결제하기</button></div>
+        </div>
+        </div>
+       
+    <footer>
+        <div class=""></div>
+    </footer>
+   
+</body>
+</html>
