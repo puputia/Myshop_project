@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SANJUGotgam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/SANJUGotgam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    width: 100%;
+    height: 160px;
+    line-height: 160px;
+    font-size: 30px;
+    background-color: #eee;
+    text-align: center;
+}
+
+
+.mem-check-tit {
+    text-align: center;
+    font-family: 'Happiness-Sans-Title';
+    margin:15px;
+}
+
+.mypage_container{
+    background-color: rgb(219, 239, 255);
+    display:flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height:800px;
+    align-items: center;
+    margin: 10px auto ;
+    
+}
+
+.member-container {
+    background-color: white; 
+    display:flex;
+    flex-direction: column;
+    width:800px;
+    height: 600px;
+    margin: 10px auto ;
+}
+
+.member-container > h3 {
+    font-size:18px;
+    font-weight: 500;
+    line-height: 140%;
+    text-align:center;
+    margin-top:30px;
+    color: #000;
+    font-family: 'Happiness-Sans-Regular';
+}
+
+
+.mem-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Setting-profile {
+    margin: 35px;
+}
+
+.input-label {
+    font-size:15px;
+    font-family: 'SANJUGotgam';
+    margin:25px 0px 25px 0px;
+}
+
+.cancel-button-wrap button {
+    border: none;
+    font-size: 20px;
+    margin-top: 25px;
+    background-color: rgb(242, 134, 159);
+    color: white;
+    border-radius: 60px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+
+}
+
+.cancel-btn button {
+    border: none;
+    font-size: 20px;
+    
+    background-color: rgb(181, 160, 230);
+    color: white;
+    margin: 16px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+    
+
+}
+
+.save-btn button {
+    border: none;
+    font-size: 20px;
+    
+    background-color: rgb(83, 198, 198);
+    color: white;
+    margin: 16px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+    
+   
+}
+
+.btn-area {
+    text-align:center;
+    margin: 10px auto;
+    display:flex;
+    flex-direction: row;
+}
+
+
+.login_ID, .name-form, .pw-form, .Email-form,
+.phone-form, .address-form {
+    margin: 15px;
+}
+
+.input-outer input {
+    font-size:16px;
+    width: 245px;
+    height: 25px;
+    margin: 5px 0 5px 0;
+}
+
+

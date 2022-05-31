@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보 관리 페이지</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./profile.css" />
+</head>
+<body>
+    <header class="header">헤더영역 @views.html.common.header()</header>
+    <div class="mypage_container">
+      <div class="member-container">
+        <h2 class="mem-check-tit">회원정보 관리</h2>
+       <form class="mem-form">
+           <div class="Setting-profile">
+               <div class="login_ID">
+                   <label for="login_ID" class="input-label">아이디</label>
+                    <div class="input-disabled">
+                        <span>sunny100487</span>
+                    </div>
+                </div>    
+                <hr>
+                <div class="name-form">
+                    <label for="name" class="input-label">이름</label>
+                    <div class="input-outer">
+                        <input type="text" id="name" class="form_control" value="서혜인">
+                    </div>
+                </div>
+                <div class="pw-form">
+                    <label for="pw" class="input-label">비밀번호</label>
+                    <div class="input-outer">
+                        <input type="password" id="pw" class="form_control" value="kanon27%">
+                    </div>
+                </div>
+                <hr>
+                <div class="Email-form">
+                    <label for="email" class="input-label">이메일</label>
+                     <div class="input-disabled">
+                         <span>sunny100487@naver.com</span>
+                     </div>
+                </div>
+                <hr>
+                <div class="phone-form">
+                    <label for="phone" class="input-label">핸드폰 번호</label>
+                    <div class="input-disabled">
+                        <span>010-1234-4567</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="address-form">
+                    <label for="address" class="input-label">주소</label>
+                    <div class="input-outer">
+                        <input type="text" id="address" class="form_control" value="서울특별시 종로구 청와대로 1">
+                    </div>
+                </div>
+               
+           </div>
+       </form>
+            <div class="btn-area">
+                <div class="save-btn">
+                    <button id="save">저장하기</button>
+                </div>
+                <div class="cancel-btn">
+                    <button id="cancel">취소하기</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+  
+</body>
+</html>
