@@ -55,12 +55,13 @@ readMoreBtn.forEach((btn) => {
 
 /* ------------------------------ 리뷰 쓰기 ------------------------------ */
 
+const reviewLayer = document.querySelector(".review-layer");
 function writeReview() {
-  const popUrl = "write-review.html";
-  const popOption =
-    "top=40,left=40,width=520,height=600,resizable=no,location=no";
-  window.open(popUrl, "_new", popOption);
-  console.log("hey");
+  reviewLayer.style.display = "flex";
+}
+
+function closePopup() {
+  reviewLayer.style.display = "none";
 }
 
 /* ------------------------------ //리뷰 쓰기 ------------------------------ */
