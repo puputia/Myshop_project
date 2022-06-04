@@ -14,51 +14,65 @@
     <div class="mypage_container">
       <div class="member-container">
         <h2 class="mem-check-tit">회원정보 관리</h2>
-       <form class="mem-form">
-           <div class="Setting-profile">
-               <div class="login_ID">
-                   <label for="login_ID" class="input-label">아이디</label>
-                    <div class="input-disabled">
-                        <span>sunny100487</span>
+        <div class="tabs">
+            <input id="profile-info" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="profile-info"><a href="./profile.html">회원정보 관리</a></label>
+            <input id="order-check" type="radio" name="tab_item" disabled>
+            <label class="tab_item" for="order-check"><a href="./order-list.html">주문조회</a></label>
+            <div class="tab_content" id="profile_content">
+                <form class="mem-form">
+                    <div class="Setting-profile">
+                        <div class="login_ID">
+                            <label for="login_ID" class="input-label">아이디</label>
+                             <div class="input-disabled">
+                                 <span>sunny100487</span>
+                             </div>
+                         </div>    
+                         <hr>
+                         <div class="name-form">
+                             <label for="name" class="input-label">이름</label>
+                             <div class="input-outer">
+                                 <input type="text" id="name" class="form_control" value="서혜인">
+                             </div>
+                         </div>
+                         <div class="pw-form">
+                             <label for="pw" class="input-label">비밀번호</label>
+                             <div class="input-outer">
+                                 <input type="password" id="pw" class="form_control" value="kanon27%">
+                             </div>
+                         </div>
+                         <hr>
+                         <div class="Email-form">
+                             <label for="email" class="input-label">이메일</label>
+                              <div class="input-disabled">
+                                  <span>sunny100487@naver.com</span>
+                              </div>
+                         </div>
+                         <hr>
+                         <div class="phone-form">
+                             <label for="phone" class="input-label">핸드폰 번호</label>
+                             <div class="input-disabled">
+                                 <span>010-1234-4567</span>
+                             </div>
+                         </div>
+                         <hr>
+                         <div class="address-form">
+                             <label for="address" class="input-label">주소</label>
+                             <div class="input-outer">
+                                 <input type="text" id="address" class="form_control" value="서울특별시 종로구 청와대로 1">
+                             </div>
+                             <div class="input-outer">
+                                <input type="text" id="address" class="form_control" value="상세주소">
+                            </div>
+                         </div>
+                        
                     </div>
-                </div>    
-                <hr>
-                <div class="name-form">
-                    <label for="name" class="input-label">이름</label>
-                    <div class="input-outer">
-                        <input type="text" id="name" class="form_control" value="서혜인">
-                    </div>
-                </div>
-                <div class="pw-form">
-                    <label for="pw" class="input-label">비밀번호</label>
-                    <div class="input-outer">
-                        <input type="password" id="pw" class="form_control" value="kanon27%">
-                    </div>
-                </div>
-                <hr>
-                <div class="Email-form">
-                    <label for="email" class="input-label">이메일</label>
-                     <div class="input-disabled">
-                         <span>sunny100487@naver.com</span>
-                     </div>
-                </div>
-                <hr>
-                <div class="phone-form">
-                    <label for="phone" class="input-label">핸드폰 번호</label>
-                    <div class="input-disabled">
-                        <span>010-1234-4567</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="address-form">
-                    <label for="address" class="input-label">주소</label>
-                    <div class="input-outer">
-                        <input type="text" id="address" class="form_control" value="서울특별시 종로구 청와대로 1">
-                    </div>
-                </div>
-               
-           </div>
-       </form>
+                </form>
+            </div>
+            
+           
+        </div>
+       
             <div class="btn-area">
                 <div class="save-btn">
                     <button id="save">저장하기</button>

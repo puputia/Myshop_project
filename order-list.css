@@ -58,97 +58,11 @@
     display:flex;
     flex-direction: column;
     width:800px;
-    height: 900px;
+    height: 100%;
     margin: 10px auto ;
 }
 
-.member-container > h3 {
-    font-size:18px;
-    font-weight: 500;
-    line-height: 140%;
-    text-align:center;
-    margin-top:30px;
-    color: #000;
-    font-family: 'Happiness-Sans-Regular';
-}
 
-
-.mem-form {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.Setting-profile {
-    margin: 35px;
-}
-
-.input-label {
-    font-size:15px;
-    font-family: 'SANJUGotgam';
-    margin:25px 0px 25px 0px;
-}
-
-.cancel-button-wrap button {
-    border: none;
-    font-size: 20px;
-    margin-top: 25px;
-    background-color: rgb(242, 134, 159);
-    color: white;
-    border-radius: 60px;
-    height: 50px;
-    width: 200px;
-    font-family: 'yg-jalnan';
-
-}
-
-.cancel-btn button {
-    border: none;
-    font-size: 20px;
-    
-    background-color: rgb(181, 160, 230);
-    color: white;
-    margin: 16px;
-    height: 50px;
-    width: 200px;
-    font-family: 'yg-jalnan';
-    
-
-}
-
-.save-btn button {
-    border: none;
-    font-size: 20px;
-    
-    background-color: rgb(83, 198, 198);
-    color: white;
-    margin: 16px;
-    height: 50px;
-    width: 200px;
-    font-family: 'yg-jalnan';
-    
-   
-}
-
-.btn-area {
-    text-align:center;
-    margin: 10px auto;
-    display:flex;
-    flex-direction: row;
-}
-
-
-.login_ID, .name-form, .pw-form, .Email-form,
-.phone-form, .address-form {
-    margin: 15px;
-}
-
-.input-outer input {
-    font-size:16px;
-    width: 245px;
-    height: 25px;
-    margin: 5px 0 5px 0;
-}
 
 .tabs {
     margin-top: 50px;
@@ -193,9 +107,9 @@
   
   
   /* 선택 된 탭 콘텐츠를 표시 */
-  #profile-info:checked ~ #profile_content,
-  #order-check:checked ~ #order-check_content
-   {
+  #all:checked ~ #all_content,
+  #order-check:checked ~ #order-check-content,
+  #design:checked ~ #design_content {
     display: block;
   }
   
@@ -204,3 +118,70 @@
     background-color: #333333;
     color: #fff;
   }
+
+/* .goods {
+    border: 1px solid #cccccccc;
+    margin:2px;
+   
+    display:flex;
+    align-items: center;
+    
+    justify-content:row;
+   
+
+} */
+
+.goods { 
+    
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.img-box {
+    margin:20px;
+    display:flex;
+}
+
+.order-container {
+ 
+
+ align-items: center;
+ 
+}
+    
+    
+ .info {
+    flex-direction: row;
+    
+ }
+
+
+.delivery_status {
+    
+   
+    border: 1px solid #cccccccc;
+    margin-left:20px;
+    width:120px;
+    text-align:center;
+}
+   
+.order-content {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.delivery-icon {
+    font-size: 25px;
+}
+
+.goods_tit {
+    font-weight: bold;
+}
+.detail{
+    color:green;
+}
+
+
