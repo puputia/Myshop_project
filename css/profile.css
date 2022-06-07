@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SANJUGotgam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/SANJUGotgam.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    width: 100%;
+    height: 160px;
+    line-height: 160px;
+    font-size: 30px;
+    background-color: #eee;
+    text-align: center;
+}
+
+/* mypage_container  */
+.mypage_container{
+    background-color: rgb(219, 239, 255);
+    display:flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height:1000px;
+    align-items: center;
+    margin: 10px auto ;
+    
+}
+
+/* member_container  */
+
+.member-container {
+    background-color: white; 
+    display:flex;
+    flex-direction: column;
+    width:800px;
+    height: 900px;
+    margin: 10px auto ;
+}
+
+.member-container > h3 {
+    font-size:18px;
+    font-weight: 500;
+    line-height: 140%;
+    text-align:center;
+    margin-top:30px;
+    color: #000;
+    font-family: 'Happiness-Sans-Regular';
+}
+
+.profile-tit {
+    text-align: center;
+    font-family: 'Happiness-Sans-Title';
+    margin:15px;
+}
+
+/* 회원정보 폼 */
+.mem-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Setting-profile {
+    margin: 35px;
+}
+
+.input-label {
+    font-size:15px;
+    font-family: 'SANJUGotgam';
+    margin:25px 0px 25px 0px;
+}
+
+.login_ID, .name-form, .pw-form, .Email-form,
+.phone-form, .address-form {
+    margin: 15px;
+}
+
+.input-outer input {
+    font-size:16px;
+    width: 245px;
+    height: 25px;
+    margin: 5px 0 5px 0;
+}
+
+/* 버튼 */
+.cancel-button-wrap button {
+    border: none;
+    font-size: 20px;
+    margin-top: 25px;
+    background-color: rgb(242, 134, 159);
+    color: white;
+    border-radius: 60px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+
+}
+
+.cancel-btn button {
+    border: none;
+    font-size: 20px;
+    background-color: rgb(181, 160, 230);
+    color: white;
+    margin: 16px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+}
+
+.save-btn button {
+    border: none;
+    font-size: 20px;
+    background-color: rgb(83, 198, 198);
+    color: white;
+    margin: 16px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+}
+
+.btn-area {
+    text-align:center;
+    margin: 10px auto;
+    display:flex;
+    flex-direction: row;
+}
+
+/* 탭메뉴 */
+.tabs {
+    margin-top: 50px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 700px;
+    margin: 0 auto;}
+  
+  /* 탭 스타일 */
+  .tab_item {
+    width: calc(100%/2);
+    height: 50px;
+    border-bottom: 3px solid #333333;
+    background-color: #f8f8f8;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    color: #333333;
+    display: block;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.2s ease;
+  }
+  .tab_item:hover {
+    opacity: 0.75;
+  }
+  
+  /* 라디오 버튼 UI삭제*/
+  input[name="tab_item"] {
+    display: none;
+  }
+  
+  /* 탭 컨텐츠 스타일 */
+  .tab_content {
+    display: none;
+    padding: 40px 40px 0;
+    clear: both;
+    overflow: hidden;
+  }
+  
+  
+  /* 선택 된 탭 콘텐츠를 표시 */
+  #profile-info:checked ~ #profile_content,
+  #order-check:checked ~ #order-check_content
+   {
+    display: block;
+  }
+  
+  /* 선택된 탭 스타일 */
+  .tabs input:checked + .tab_item {
+    background-color: #333333;
+    color: #fff;
+  }

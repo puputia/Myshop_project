@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Happiness-Sans-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Happiness-Sans-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/Happiness-Sans-Title.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    width: 100%;
+    height: 160px;
+    line-height: 160px;
+    font-size: 30px;
+    background-color: #eee;
+    text-align: center;
+}
+
+/* 최상위 부모 컨테이너 */
+.mypage_container{
+    background-color: rgb(219, 239, 255);
+    display:flex;
+    flex-direction: column;
+    border-radius: 15px;
+    height:800px;
+    align-items: center;
+    margin: 10px auto ;
+}
+
+/* 회원정보 확인 컨테이너 */
+.member-container {
+    background-color: white; 
+    display:flex;
+    flex-direction: column;
+    width:800px;
+    height: 600px;
+    margin: 10px auto ;
+}
+
+.member-container > h3 {
+    font-size:18px;
+    font-weight: 500;
+    line-height: 140%;
+    text-align:center;
+    margin-top:30px;
+    color: #000;
+    font-family: 'Happiness-Sans-Regular';
+}
+
+.mem-check-tit {
+    text-align: center;
+    font-family: 'Happiness-Sans-Title';
+    margin:15px;
+}
+
+/* 로고 */
+.logo-wrap{
+	display:flex;	
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    
+}
+
+.member-logo {
+    text-align: center;
+    align-items: center;
+    
+}
+
+/* 개인정보 확인 로그인 박스 */
+
+.login-input-section-wrap {
+	padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    margin: 0 auto;
+}
+
+/* 로그인(아이디) 박스(이미 id는 입력되어있음) */
+.login-input-wrap{
+	width: 465px;
+	height :32px;
+	background: white;
+    padding:3px;
+    margin:3px;
+    display:flex;
+    justify-content: center;
+}
+
+.login-input-wrap input{
+	border: solid 0.2px;
+	width: 300px;
+	font-size: 20px;
+    justify-content: center;
+	height: 30px;
+}
+
+.original-ID {
+    margin-right: 180px;
+}
+
+/* 비밀번호 박스-입력해야함 */
+.password-wrap{
+	margin-top: 13px;
+}
+
+/* 아이콘 */
+.pw_icon, .id_icon {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* 버튼 */
+.login-button-wrap button {
+    border: none;
+    font-size: 20px;
+    margin-top: 50px;
+    background-color: rgb(97, 161, 235);
+    color: white;
+    border-radius: 60px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+}
+
+.cancel-button-wrap button {
+    border: none;
+    font-size: 20px;
+    margin-top: 25px;
+    background-color: rgb(242, 134, 159);
+    color: white;
+    border-radius: 60px;
+    height: 50px;
+    width: 200px;
+    font-family: 'yg-jalnan';
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보 관리 페이지</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+</head>
+<body>
+    <header class="header">헤더영역 @views.html.common.header()</header>
+    <!-- mypage_container -->
+    <div class="mypage_container">
+
+        <!-- member_container -->
+      <div class="member-container">
+        <h2 class="profile-tit">회원정보 관리</h2>
+        
+        <!-- 탭 메뉴(라디오 버튼 활용) -->
+        <div class="tabs">
+            <input id="profile-info" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="profile-info"><a href="./profile.html">회원정보 관리</a></label>
+            <input id="order-check" type="radio" name="tab_item" disabled>
+            <label class="tab_item" for="order-check"><a href="./order-list.html">주문조회</a></label>
+            <div class="tab_content" id="profile_content">
+
+                <!-- 회원정보 폼 -->
+                <form class="mem-form">
+                    <!-- 프로필 설정 -->
+                    <div class="Setting-profile">
+                        <!-- 로그인 항목 disabled (아이디) -->
+                        <div class="login_ID">
+                            <label for="login_ID" class="input-label">아이디</label>
+                             <div class="input-disabled">
+                                 <span>sunny100487</span>
+                             </div>
+                         </div>    
+                         <hr>
+                         <!-- 이름 항목 -->
+                         <div class="name-form">
+                             <label for="name" class="input-label">이름</label>
+                             <div class="input-outer">
+                                 <input type="text" id="name" class="form_control" value="서혜인">
+                             </div>
+                         </div>
+
+                         <!-- 비밀번호 항목 -->
+                         <div class="pw-form">
+                             <label for="pw" class="input-label">비밀번호</label>
+                             <div class="input-outer">
+                                 <input type="password" id="pw" class="form_control" value="kanon27%">
+                             </div>
+                         </div>
+                         <hr>
+                         <!-- 이메일 항목  disabled -->
+                         <div class="Email-form">
+                             <label for="email" class="input-label">이메일</label>
+                              <div class="input-disabled">
+                                  <span>sunny100487@naver.com</span>
+                              </div>
+                         </div>
+                         <hr>
+                          <!-- 휴대폰 번호 항목  disabled -->
+                         <div class="phone-form">
+                             <label for="phone" class="input-label">휴대폰 번호</label>
+                             <div class="input-disabled">
+                                 <span>010-1234-4567</span>
+                             </div>
+                         </div>
+                         <hr>
+                         <!-- 주소 항목 -->
+                         <div class="address-form">
+                             <!-- 주소 -->
+                             <label for="address" class="input-label">주소</label>
+                             <div class="input-outer">
+                                 <input type="text" id="address" class="form_control" value="서울특별시 종로구 청와대로 1">
+                             </div>
+                             <!-- 상세주소 -->
+                             <div class="input-outer">
+                                <input type="text" id="address" class="form_control" value="상세주소">
+                            </div>
+                         </div>
+                        
+                    </div>
+                </form>
+            </div>
+            
+           
+        </div>
+            <!-- 버튼 -->
+            <div class="btn-area">
+                <div class="save-btn">
+                    <button id="save">저장하기</button>
+                </div>
+                <div class="cancel-btn">
+                    <button id="cancel">취소하기</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+  
+</body>
+</html>
