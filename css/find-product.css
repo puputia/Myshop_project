@@ -16,7 +16,7 @@
 }
 
 .container .page-title {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -25,31 +25,28 @@
 }
 
 .container .result-option {
-  padding: 16px;
-  background-color: #eee;
-  border-radius: 8px;
-
   display: flex;
   justify-content: space-between;
-}
-.result-option .search-sorting {
+  align-items: center;
 }
 
 .search-sorting ul {
   display: flex;
-  gap: 16px;
+  gap: 8px;
 }
 
 .search-sorting ul li button {
-  padding-left: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
   border: none;
-  background-color: transparent;
   color: #666;
+  background-color: #eee;
 }
 
 .search-sorting ul li button:hover,
 .search-sorting ul li.active button {
-  color: #333;
+  color: #eee;
+  background-color: #333;
   font-weight: 600;
 }
 
@@ -141,32 +138,34 @@
 .result-list li a dl dd .product-price {
   color: var(--price-color);
 }
-.result-list li a dl dd .review-total {
+.result-list li a dl dd .rating_star {
   margin-top: 8px;
   height: 16px;
 }
-.result-list li a dl dd .review-total span {
+.rating_star * {
   display: block;
   height: 100%;
   float: left;
 }
-.result-list li a dl dd .review-total .total_rating {
+.rating_star .star {
   width: 80px;
   background: url(../img/ico_star-grey.png) repeat-x left center;
   background-size: auto 100%;
 }
-.result-list li a dl dd .review-total .total_rating .rating_score {
-  width: 90%;
+.rating_star .star .rating {
+  width: 0;
   background: url(../img/ico_star-yellow.png) repeat-x left center;
   background-size: auto 100%;
+  font-size: 0;
 }
-.result-list li a dl dd .review-total .total-count {
+.rating_star .rating-total-count {
   font-weight: bold;
   font-size: 16px;
   line-height: 1;
   margin-left: 8px;
 
   vertical-align: top;
+  font-weight: 400;
 }
 
 /* 페이지네이션 */

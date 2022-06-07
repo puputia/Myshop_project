@@ -77,31 +77,33 @@ button {
   font-size: 18px;
 }
 
-.order_tit-box .review-total {
+.order_tit-box .rating_star {
   margin-left: 4px;
 
   height: 24px;
 }
 
-.order_tit-box .review-total span {
-  display: inline-block;
+.order_tit-box .rating_star * {
+  display: block;
   height: 100%;
+  float: left;
 }
 
-.order_tit-box .review-total .total_rating {
+.order_tit-box .rating_star .star {
   width: 120px;
   background: url(../img/ico_star-grey.png) repeat-x left center;
 }
 
-.order_tit-box .review-total .total_rating .rating_score {
-  width: 90%;
+.order_tit-box .rating_star .star .rating {
+  width: 0;
   background: url(../img/ico_star-yellow.png) repeat-x left center;
+  font-size: 0;
 }
 
-.order_tit-box .review-total .total-count {
+.order_tit-box .rating_star .rating-total-count {
   color: var(--acent-color);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 8px;
   background-color: #fff;
 
