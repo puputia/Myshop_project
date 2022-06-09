@@ -37,6 +37,7 @@ button {
 
 fieldset {
   border: none;
+  display: block;
 }
 legend {
   font-size: 0;
