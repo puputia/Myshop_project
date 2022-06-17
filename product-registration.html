@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8bcc305d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="css/common.css" /> -->
+    <link rel="stylesheet" href="css/product-registration.css" />
+    <style>
+      img {
+        width: 100px;
+      }
+    </style>
+    <title>검색하기</title>
+  </head>
+  <body>
+    <!-- 대치필요 -->
+    <header class="header">헤더영역 @views.html.common.header()</header>
+    <!-- //대치필요 -->
+
+    <div class="container">
+      <h2 class="page-title">상품 등록하기</h2>
+      <div class="form-wrapper">
+        <form action="#" method="post">
+          <fieldset class="product-basic-info">
+            <legend>상품정보 등록</legend>
+            <div class="category">
+              <span>카테고리</span>
+              <select name="" id="">
+                <option value="">대분류</option>
+              </select>
+              <select name="" id="">
+                <option value="">소분류</option>
+              </select>
+              <select name="" id="">
+                <option value="">상품종류</option>
+              </select>
+            </div>
+
+            <label class="product-name">
+              <span>상품명</span>
+              <input type="text" />
+            </label>
+
+            <label class="product-price">
+              <span>상품가격</span>
+              <input type="number" />
+            </label>
+          </fieldset>
+
+          <fieldset class="product-image">
+            <legend>상품 이미지 등록</legend>
+
+            <div class="main-thumbnail">
+              <span>대표 이미지</span>
+              <label for="uploadMainPhoto">
+                <span>대표사진 등록하기</span>
+                <input
+                  type="file"
+                  name="mainThumbnail"
+                  accept=".jpg,.png,.jpeg"
+                />
+              </label>
+              <div class="main-thumbnail-preview">
+                <img src="img/height-long-test.jpg" alt="대표사진" />
+              </div>
+            </div>
+
+            <div class="sub-thumbnails">
+              <span>상품미리보기 이미지</span>
+              <label for="uploadMainPhoto">
+                미리보기 사진 등록하기
+                <input
+                  type="file"
+                  name="mainThumbnail"
+                  accept=".jpg,.png,.jpeg"
+                  multiple
+                />
+              </label>
+
+              <ul class="sub-thumbnail-preview">
+                <li>
+                  <img src="img/height-long-test.jpg" alt="상품미리보기" />
+                </li>
+                <li>
+                  <img src="img/height-long-test.jpg" alt="상품미리보기" />
+                </li>
+                <li>
+                  <img src="img/height-long-test.jpg" alt="상품미리보기" />
+                </li>
+                <li>
+                  <img src="img/height-long-test.jpg" alt="상품미리보기" />
+                </li>
+              </ul>
+            </div>
+
+            <div class="detail-info">
+              <span>상품상세 이미지 등록</span>
+              <label for="uploadMainPhoto">
+                <span>상품상세이미지</span>
+                <input
+                  type="file"
+                  name="mainThumbnail"
+                  accept=".jpg,.png,.jpeg"
+                />
+              </label>
+              <div class="detail-image-preview"></div>
+            </div>
+          </fieldset>
+
+          <input type="submit" value="상품 등록" />
+
+          <fieldset class="product-option">
+            <legend>상품 옵션 등록</legend>
+            <div class="option-group"></div>
+          </fieldset>
+          <input type="button" value="옵션추가" />
+        </form>
+      </div>
+    </div>
+
+    <!-- 대치필요 -->
+    <footer class="footer">푸터 영역</footer>
+    <!-- //대치필요 -->
+  </body>
+</html>
