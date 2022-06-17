@@ -919,7 +919,6 @@ button.count_plus-btn {
 }
 
 .write-qna button:active,
-input[type="submit"]:active,
 .write-qna .close-btn:hover {
   outline: 2px solid lightblue;
 }
@@ -973,7 +972,25 @@ input[type="submit"]:active,
   outline: none;
 }
 
-.write-qna input[type="submit"] {
+.write-qna .qna-submit {
+  display: block;
+  width: 120px;
+  line-height: 48px;
+  margin: 48px auto 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #ddd;
+
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: -0.6px;
+}
+.write-qna .qna-submit:hover {
+  background-color: var(--acent-color);
+  color: #fff;
+}
+
+/* .write-qna input[type="submit"] {
   display: block;
   width: 120px;
   line-height: 48px;
@@ -990,7 +1007,7 @@ input[type="submit"]:active,
 .write-qna input[type="submit"]:hover {
   background-color: var(--acent-color);
   color: #fff;
-}
+} */
 /* //문의 작성 창---------------------------------- */
 
 .product-qna .qna-box {
