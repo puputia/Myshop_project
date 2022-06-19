@@ -1,0 +1,257 @@
+.header,
+.footer {
+  width: 100%;
+  height: 160px;
+  line-height: 160px;
+  font-size: 30px;
+  background-color: #eee;
+  text-align: center;
+}
+
+.container {
+  margin: 40px 0;
+}
+
+.container .page-title {
+  margin-bottom: 24px;
+  padding: 16px 24px;
+  background-color: #eee;
+  border-radius: 8px;
+
+  font-size: 24px;
+}
+
+.container .section-title {
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ccc;
+
+  font-size: 18px;
+  color: #333;
+}
+
+.container .form-wrapper input {
+  font-size: 16px;
+  padding: 4px 8px;
+  outline: none;
+}
+
+.form-wrapper fieldset {
+  padding: 32px;
+  margin-top: 32px;
+  border: 1px solid #ccc;
+
+  border-radius: 8px;
+}
+
+.form-wrapper fieldset label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.form-wrapper fieldset strong {
+  display: inline-block;
+  min-width: 100px;
+  font-weight: 400;
+}
+
+.form-wrapper .product-basic-info .category {
+  margin-bottom: 16px;
+}
+
+.category select {
+  margin-right: 8px;
+  padding: 4px 8px;
+
+  font-size: 16px;
+  outline: none;
+}
+.form-wrapper .product-image .thumbnails label {
+  cursor: pointer;
+}
+
+.form-wrapper .product-image .thumbnails label span {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+
+  border-radius: 4px;
+}
+
+.form-wrapper .product-image .thumbnails label span:hover {
+  background-color: var(--acent-color);
+}
+
+.form-wrapper .product-image .thumbnails input {
+  display: none;
+}
+
+/* ----------------썸네일 추가 input---------------- */
+.thumbnails .add-thumbnails {
+  display: flex;
+  gap: 16px;
+}
+/* ----------------//썸네일 추가 input---------------- */
+
+/* ----------------추가한 이미지 미리보기---------------- */
+.thumbnails .image-preview {
+  margin-top: 32px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.thumbnails .image-preview img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.thumbnails .image-preview .main-thumbnail-preview,
+.thumbnails .image-preview .sub-thumbnail-preview li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #ddd;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.thumbnails .image-preview .detail-image-preview {
+  width: 298px;
+}
+
+.thumbnails .image-preview .thumbnail-preview {
+  width: 640px;
+}
+
+.thumbnail-preview .main-thumbnail-preview {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+.thumbnail-preview .sub-thumbnail-preview {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  box-sizing: border-box;
+}
+
+.thumbnail-preview .sub-thumbnail-preview li {
+  width: 154px;
+  height: 154px;
+  border: 1px solid #ddd;
+
+  position: relative;
+}
+
+.thumbnail-preview .sub-thumbnail-preview li .delite-image {
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  border: none;
+  background: url(../img/ico_close-btn.png) no-repeat center/12px;
+  background-color: #ddd;
+
+  font-size: 0;
+
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  display: none;
+}
+
+.thumbnail-preview .sub-thumbnail-preview li:hover .delite-image {
+  display: block;
+}
+
+/* ----------------//추가한 이미지 미리보기---------------- */
+
+/* ------------------------------- */
+
+.form-wrapper .product-registration-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 32px;
+  padding: 16px 48px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.form-wrapper .product-registration-btn:hover {
+  background-color: var(--acent-color);
+}
+
+.product-option .section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-option .section-title button {
+  padding: 4px 24px;
+  background-color: #eee;
+
+  border-radius: 4px;
+  border: none;
+
+  line-height: 2;
+  color: #333;
+}
+
+.product-option .section-title button:hover {
+  background-color: var(--acent-color);
+}
+
+.option-list label span {
+  display: inline-block;
+  min-width: 100px;
+}
+
+.option-list .option {
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #eee;
+
+  position: relative;
+}
+
+.option-list .option ~ .option {
+  margin-top: 16px;
+}
+
+.option-list .option .option-name {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.option-list .option .item-add-btn {
+  padding: 4px 24px;
+  background-color: #fff;
+
+  border-radius: 4px;
+  border: none;
+
+  line-height: 2;
+  color: #333;
+
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+.option-list .option .item-add-btn:hover {
+  outline: 2px solid var(--acent-color);
+}
+
+.option-list .option .item-list .item {
+  display: flex;
+  gap: 32px;
+}
