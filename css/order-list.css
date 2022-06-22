@@ -111,11 +111,14 @@ opacity: 0.75;
 
 .order-container {
     align-items: center;
- 
+    
 }
 
 .info {
     flex-direction: row;
+    width: 300px;
+    align-items: center;
+    text-align:center;
     
 }
 
@@ -125,13 +128,13 @@ opacity: 0.75;
     margin-left:20px;
     width:120px;
     text-align:center;
+    
 }
    
 .order-content {
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
 }
 
 .delivery-icon {
