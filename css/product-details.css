@@ -726,9 +726,6 @@ button.count_plus-btn {
   color: #999;
 }
 
-.write-review .review-form-wrap form > fieldset {
-}
-
 .write-review .review-form-wrap form .star_rating {
   background-color: rgb(250, 250, 250);
   padding: 24px;
@@ -807,7 +804,7 @@ button.count_plus-btn {
   font-size: 1rem;
   cursor: pointer;
 }
-.add-photo:firs .write-review .upload-photo .add-photo label:hover {
+.write-review .upload-photo .add-photo label:hover {
   border-color: #aaa;
 }
 
@@ -851,8 +848,8 @@ button.count_plus-btn {
   gap: 8px;
 }
 
-.write-review .review-form-wrap .form-btn-wrap input[type="submit"],
-.write-review .review-form-wrap .form-btn-wrap .close-btn {
+.write-review .form-btn-wrap .review-submit-btn,
+.write-review .form-btn-wrap .close-btn {
   display: block;
   width: 120px;
   line-height: 48px;
@@ -863,21 +860,21 @@ button.count_plus-btn {
   font-size: 1rem;
   letter-spacing: -0.6px;
 }
-.write-review .review-form-wrap .form-btn-wrap .close-btn {
+.write-review .form-btn-wrap .close-btn {
   background-color: transparent;
   border: 2px solid #ddd;
 }
-.write-review .review-form-wrap .form-btn-wrap .close-btn:hover {
+.write-review .form-btn-wrap .close-btn:hover {
   border-color: #999;
 }
 
-.write-review .review-form-wrap .form-btn-wrap input[type="submit"] {
+.write-review .form-btn-wrap .review-submit-btn {
   border: none;
   background-color: #ddd;
   cursor: pointer;
 }
 
-.write-review .review-form-wrap .form-btn-wrap input[type="submit"]:hover {
+.write-review .form-btn-wrap .review-submit-btn:hover {
   background-color: #999;
   color: #fff;
 }
