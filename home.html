@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myshop 홈페이지</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <!-- title 로고 삽입 -->
+    <link href="./logo/simple.png" rel="shortcut icon" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/08d1af579d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- <header class="header">헤더영역 @views.html.common.header()</header> -->
+    <!-- 헤더 -->
+
+    <div class="header-container">
+        <!-- 상단 회원가입, 로그인 부분(회색바) -->
+          <div class="top">
+              <ul class="top-menu">
+                  <li class="test"><a href="#"><p>회원가입</p></a></li>
+                  <li class="test"><a href="#"><p>로그인</p></a></li>
+              </ul>
+          </div>
+          
+          <header>
+              <!-- 로고 -->
+              <div class="logo"><a href=""><img src="./logo/logosmall2.png" alt="logo" width="240" height="100"></a></div>
+  
+              <!-- 검색창 -->
+              <div class="search">
+                  <!-- 검색필터 -->
+                  <select class="select-space">              
+                      <option value="All">전체</option>
+                      <option value="fashion">패션의류/잡화</option>
+                      <option value="beauty">뷰티</option>
+                      <option value="food">식품</option>
+                      <option value="Electronics">전자기기</option>
+                      <option value="kitchen">주방용품</option>
+                      <option value="pet">반려동물 용품</option>
+                  </select>
+                  <input type="text" placeholder="검색어 입력">
+                  <!-- 검색버튼 -->
+                  <button>검색</button> 
+                 
+              </div>
+              <!-- 아이콘 -->
+              <div class="icon">
+                  <div class="Mypage"><a href="#"><i class="fa fa-user"></i><div class="icon-text">Mypage</div></a></div> 
+                  <div class="cart"><a href="#"><i class="fa fa-shopping-cart"></i><div class="icon-text"></div>Cart</a></div>
+              </div>
+          
+          </header>
+  
+          <!-- 카테고리바 -->
+          <nav>
+              <ul class="menu-hedaer">
+                <li>
+                  <a class="category-tit" href="#">패션의류/잡화</a>
+                  <ul class="submenu">
+                    <li><a class="sub-tit" href="#">여성패션</a></li>
+                    <li><a class="sub-tit" href="#">남성패션</a></li>
+                    <li><a class="sub-tit" href="#">남녀 공용 의류</a></li>
+                    <li><a class="sub-tit" href="#">유아동 패션</a></li>
+                  </ul>
+                </li>
+        
+                <li>
+                  <a class="category-tit" href="#">뷰티</a>
+                  <ul class="submenu">
+                    <li><a class="sub-tit" href="#">스킨케어</a></li>
+                    <li><a class="sub-tit" href="#">메이크업</a></li>
+                    <li><a class="sub-tit" href="#">향수</a></li>
+                    <li><a class="sub-tit" href="#">헤어</a></li>
+                    <li><a class="sub-tit" href="#">로드샵</a></li>
+                  </ul>
+                </li>
+        
+                <li>
+                  <a class="category-tit" href="#">식품</a>
+                  <ul class="submenu">
+                    <li><a class="sub-tit" href="#">냉동/냉장/간편요리</a></li>
+                    <li><a class="sub-tit" href="#">과일</a></li>
+                    <li><a class="sub-tit" href="#">과자/초콜릿/시리얼</a></li>
+                    <li><a class="sub-tit" href="#">생수/음료</a></li>
+                    <li><a class="sub-tit" href="#">쌀/잡곡</a></li>
+                  </ul>
+                </li>
+        
+                <li>
+                  <a class="category-tit" href="#">전자기기</a>
+                  <ul class="submenu">
+                    <li><a class="sub-tit" href="#">생활가전</a></li>
+                    <li><a class="sub-tit" href="#">청소기</a></li>
+                    <li><a class="sub-tit" href="#">냉장고</a></li>
+                    <li><a class="sub-tit" href="#">TV</a></li>
+                    <li><a class="sub-tit" href="#">게임기기</a></li>
+                  </ul>
+                </li>
+        
+                <li>
+                  <a class="category-tit" href="#">주방용품</a>
+                  <ul class="submenu">
+                    <li><a class="sub-tit" href="#">주방가전</a></li>
+                    <li><a class="sub-tit" href="#">냄비/프라이팬</a></li>
+                    <li><a class="sub-tit" href="#">주방잡화</a></li>
+                    <li><a class="sub-tit" href="#">이유/유아식기</a></li>
+                    <li><a class="sub-tit" href="#">보온/보냉용품</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="category-tit" href="#">반려동물 용품</a>
+                  <ul class="submenu">
+                    <li><a class="sub-tit" href="#">사료</a></li>
+                    <li><a class="sub-tit" href="#">간식</a></li>
+                    <li><a class="sub-tit" href="#">산책용품</a></li>
+                    <li><a class="sub-tit" href="#">관상어 용품</a></li>
+                    <li><a class="sub-tit" href="#">소동물/가축용품</a></li>
+                  </ul>
+                </li>
+        
+                
+              </ul>
+          </nav>
+              
+          
+    </div>
+
+    <!-- home-container -->
+    <div class="home-container">
+        <!-- 자동 슬라이더 박스 -->
+        <div class="slidebox">
+            <input type="radio" name="slide" id="slide01" checked>
+            <input type="radio" name="slide" id="slide02">
+            <input type="radio" name="slide" id="slide03">
+            <input type="radio" name="slide" id="slide04">
+            <ul class="slidelist">
+                <li class="slideitem">
+                    <div>
+                        <label for="slide04" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                        <a><img src="./img/slide01.jpg" width="1024" height="650"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                        <a><img src="./img/slide02.jpg" width="1024" height="650"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide02" class="left"></label>
+                        <label for="slide04" class="right"></label>
+                        <a><img src="./img/slide03.png" width="1024" height="650"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="slide03" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                        <a><img src="./img/slide04.jpg" width="1024" height="650"></a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="paginglist">
+                <li>
+                    <label for="slide01"></label>
+                </li>
+                <li>
+                    <label for="slide02"></label>
+                </li>
+                <li>
+                    <label for="slide03"></label>
+                </li>
+                <li>
+                    <label for="slide04"></label>
+                </li>
+            </ul>
+        </div>
+
+        
+        <!-- 상품추천 박스 -->
+
+        <div class="recommend_box">
+            <!-- 상품추천1 -->
+            <article class="recommend-goods">
+                <h2 class="tit">🍉 여름 특급세일</h2>
+                <ul class="recommend-list">
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/watermelon.jpg"
+                                    alt="수박"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">곰곰 당도선별 함안수박</h3>
+                                <span class="sale-percent">25%</span> <strong class="product-price">12,000원</strong>
+                                <div class="original-price">16,000원</div>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">4.6</b>
+                                    </span>
+                                    <span class="rating-total-count">(36)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/dress.jpg"
+                                    alt="여름옷"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name"> 여름 스퀘어넥 미니 원피스</h3>
+                                <span class="sale-percent">30%</span> <strong class="product-price">46,130원</strong>
+                                <div class="original-price">65,900원</div>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">3.5</b>
+                                    </span>
+                                    <span class="rating-total-count">(70)</span> 
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/Leggings.gif"
+                                    alt="플레인 5부 레깅스"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">플레인 5부 레깅스</h3>
+                                <span class="sale-percent">20%</span> <strong class="product-price">33,120원</strong>
+                                <div class="original-price">41,400원</div>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">3</b>
+                                    </span>
+                                    <span class="rating-total-count">(88)</8span> 
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/shirts.jpg"
+                                    alt="하와이안 여름셔츠"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">Levis(R) Hawaiian Woven Shirt</h3>
+                                <span class="sale-percent">25%</span> <strong class="product-price">39,750원</strong>
+                                <div class="original-price">53,000원</div>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">4.5</b>
+                                    </span>
+                                    <span class="rating-total-count">(101)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </article>
+
+            <!-- 상품추천1 -->
+
+            <!-- 상품추천2 -->
+            <article class="recommend-goods">
+                <h2 class="tit"><i class="fa fa-calendar-check"style="color:purple"></i> 이달의 상품추천</h2>
+                <ul class="recommend-list">
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/steak.png"
+                                    alt="스테이크 밀키트"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">[욜케] 부채살 스테이크 밀키트</h3>
+                                <strong class="product-price">22,900원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">4.6</b>
+                                    </span>
+                                    <span class="rating-total-count">(256)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/phone.png"
+                                    alt="휴대폰"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">[삼성전자] 갤럭시 S22 Ultra 8종 (자급제)</h3>
+                                <strong class="product-price">1,292,280원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">4</b>
+                                    </span>
+                                    <span class="rating-total-count">(111)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/shirts2.jpg"
+                                    alt="반팔 티셔츠"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">베스트 레이어드 반팔 티셔츠 네이비</h3>
+                                <strong class="product-price">44,100원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">3.5</b>
+                                    </span>
+                                    <span class="rating-total-count">(64)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                   
+                    
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/imac.png"
+                                    alt="아이맥"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">Apple 2021 아이맥 24</h3>
+                                <strong class="product-price">2,180,000원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">4</b>
+                                    </span>
+                                    <span class="rating-total-count">(304)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/shoes.png"
+                                    alt="나이키 신발"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">나이키 에어 줌 페가수스 39</h3>
+                                <strong class="product-price">139,000원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">4.8</b>
+                                    </span>
+                                    <span class="rating-total-count">(18)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/phone-case.png"
+                                    alt="폰케이스"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">산리오 시나모롤 젤리 케이스</h3>
+                                <strong class="product-price">9,800원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">3.5</b>
+                                    </span>
+                                    <span class="rating-total-count">(12)</span> 
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/mealkit.jpg"
+                                    alt="돼고비 밀키트"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">[랜선식탁] 과나 돼고비 돼지 고추장 비빔국수 밀키트(2인)</h3>
+                                <strong class="product-price">14,900원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">4.1</b>
+                                    </span>
+                                    <span class="rating-total-count">(41)</span> 
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <dl>
+                            <dt class="images">
+                                <img
+                                    src="img/rice-cake.jpg"
+                                    alt="떡"
+                                />
+                            </dt>
+        
+                            <dd>
+                                <h3 class="product-name">[미자언니네 방앗간] 단호박 흑임자 인절미</h3>
+                                <strong class="product-price">4,800원</strong>
+                                <p class="rating_star">
+                                    <span class="star">
+                                        <b class="rating">3.5</b>
+                                    </span>
+                                    <span class="rating-total-count">(8)</span>
+                                </p>
+                            </dd>
+                        </dl>
+                        </a>
+                    </li>
+                </ul>
+            </article> 
+
+            <!-- 상품추천2 -->
+        </div>
+
+        <!-- 상품추천 박스 -->
+
+        <hr>
+        <!-- 푸터 -->
+        <footer>
+            <div class="row">
+                <div class="footer-itembox">
+                    <div class="f-tit">전화문의</div>
+                    <p class="txt">10시~17시</p>
+                    <p class="num">0626-xxxx</p>
+
+                </div>
+                <div class="footer-itembox">
+                    <div class="f-tit">카톡문의</div>
+                    <p class="txt">10시~17시</p>
+                    <a href=""><button class="kakao-btn"><img src="./img/kakao-icon.png" width="15" height="13"> 카톡문의</button></a>
+
+                </div>
+                <div class="footer-itembox">
+                    <div class="f-tit">입점문의</div>
+                    <p class="txt">sunny100487@naver.com</p>
+                    <a href=""><button class="enter-store">입점 신청하기</button></a>
+
+                </div>
+      
+            </div>
+            <div class="lg-line"></div>
+            <div class="row">
+                <div class="info">
+                    <div class="sns-icon">
+                       <div class="s-icon"><i class="fa fa-instagram"></i></div>
+                        <div class="s-icon"><i class="fa fa-facebook"></i></div>
+                        <div class="s-icon"><i class="fa fa-twitter"></i></div>
+                        <div class="s-icon"><i class="fa fa-youtube"></i></div>
+                    </div>
+                    <div class="copyright-wrap">
+                        <div>Copyright © My shop Corp. All Rights Reserved.</div> 
+                    </div> 
+                </div>   
+            </div>
+             
+        </footer>
+    </div>
+    <script src="rating-star.js"></script>      
+</body>
+</html>
