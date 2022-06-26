@@ -205,13 +205,19 @@
   color: #333;
 }
 
+.product-option .section-title .save-option-btn {
+  background-color: #999;
+  color: #fff;
+  font-weight: 600;
+}
+
 .product-option .section-title button:hover {
   background-color: var(--acent-color);
 }
 
 .option-list label span {
   display: inline-block;
-  min-width: 100px;
+  margin-right: 16px;
 }
 
 .option-list .option {
@@ -232,7 +238,13 @@
   margin-bottom: 24px;
 }
 
-.option-list .option .item-add-btn {
+.option-list .option .item-btn-grp {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+}
+
+.option-list .option .item-btn-grp button {
   padding: 4px 24px;
   background-color: #fff;
 
@@ -241,17 +253,39 @@
 
   line-height: 2;
   color: #333;
-
-  position: absolute;
-  top: 16px;
-  right: 24px;
 }
 
-.option-list .option .item-add-btn:hover {
+.option-list .option .item-btn-grp .option-delite-btn {
+  background-color: #999;
+  color:#fff;
+  margin-left: 8px;
+}
+
+.option-list .option .item-btn-grp button:hover {
   outline: 2px solid var(--acent-color);
 }
 
 .option-list .option .item-list .item {
   display: flex;
-  gap: 32px;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.option-list .option .item-list .item label {
+  margin-bottom: 0;
+}
+
+
+.option-list .option .item-list .delite-item-btn {
+  padding: 0 16px;
+  border: none;
+  
+  background-color: #fff;
+  border-radius: 4px;
+
+  color: #333;
+}
+
+.option-list .option .item-list .delite-item-btn:hover {
+  outline: 2px solid var(--acent-color);
 }
