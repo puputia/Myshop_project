@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="./css/login_style-sale.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <script src="https://kit.fontawesome.com/08d1af579d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="member_container">
+        <div class="wrapper">
+            
+            <header class="member-header">
+                <div class="tit_page"><h1>판매자 로그인 페이지</h1></div>
+                <!-- 로고 -->
+                <div class="member-logo"><a href=""><img src="./logo/logosmall2.png" width="300" height="120"></a></div>
+            </header>
+
+            <!-- 로그인 박스 -->
+            <section class="login-input-section-wrap">
+                <!-- 로그인 input 부분 -->
+                <div class="login-input-wrap">	
+                    <div class="id_icon"><i class="fa fa-user"></i>
+                    <input type="text" placeholder="&nbsp;&nbsp;ID" id="id"  class="account">
+                    </div>
+                </div>
+                <!-- 비밀번호 input 부분 -->
+                <div class="login-input-wrap password-wrap">
+                    <div class="pw_icon"><i class="fa fa-lock"></i>
+                    <input type="password" placeholder="&nbsp;&nbsp;Password" id="password" class="account"></div>
+                </div>
+
+                <!-- 로그인/ 회원가입 버튼 -->
+                <div class="login-button-wrap">
+                    <button id="login" class="account">로그인</button>
+                    <p id="alert" class="account"></p>
+                </div>
+                <div class="sign-in-wrap">
+                    <a href=""><button>회원가입</button></a>
+                </div>
+                
+
+                <!-- 로그인 상태유지 -->
+                <div class="login-stay-sign-in">
+                    <div class="stay_signlogo">
+                        <i class="far fa-check-square"></i>
+                        <span>로그인 상태유지</span>
+                    </div>
+                </div>
+            </section>
+            </div>
+
+            <!-- 저작권 안내 문구 -->
+            <footer>
+                <div class="copyright-wrap">
+                    <span>Copyright © My shop Corp. All Rights Reserved.</span> 
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
