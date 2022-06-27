@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'SDSamliphopangche_Outline';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.member_container {
+    width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	margin-top: 21px;
+};
+
+.wrapper {
+    width:768px;
+}
+
+.main_container .wrapper {
+	width: 96px;
+	height: 30px;
+	border: solid 1px #cccccc;
+}
+
+/* 로고 */
+.member-logo {
+    margin-top: 15px;
+    margin-bottom: -20px;
+    text-align: center;
+    align-items: center;
+     
+}
+
+.main-container .main-wrap header {
+	display:flex;
+	justify-content:flex-end;
+}
+
+.main-container .main-wrap header .logo-wrap{
+	display:flex;	
+	flex-direction: column;
+	align-items: center;
+}
+
+/* 로그인 박스 */
+.login-input-section-wrap{
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* 로그인 input 부분   */
+.login-input-wrap{
+	width: 465px;
+	height :32px;
+	background: white;
+}
+
+.password-wrap{
+	margin-top: 13px;
+}
+
+.login-input-wrap input{
+	border: solid 0.2px;
+	width: 380px;
+	margin-top: 10px;
+	font-size: 14px;
+	margin-left: 2.5px;
+	height: 30px;
+}
+
+.login-input-section-wrap {
+    display:flex;	
+	flex-direction: column;
+	align-items: center;
+}
+
+/* 로그인 & 회원가입 버튼 */
+.login-button-wrap button {
+    border: none;
+    font-weight: border;
+    font-size: 20px;
+    margin-top: 50px;
+    background-color: steelblue;
+    color: white;
+    border-radius: 2px;
+    height: 50px;
+    width: 400px;
+
+}
+
+.sign-in-wrap button {
+    border: none;
+    font-weight: border;
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: palegreen;
+    color: black;
+    border-radius: 2px;
+    height: 50px;
+    width: 400px;
+
+}
+
+/* 로그인 상태유지 */
+.login-stay-sign-in, footer {
+    margin-top: 20px;
+}
+
+/* 아이콘 */
+.pw_icon, .id_icon {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 8px;
+}
+
+/* 저작권 문구 */
+footer{
+	padding-top: 95px;
+	padding-bottom: 15px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:768px;
+}
+
+.copyright-wrap {
+    font-family: 'SDSamliphopangche_Outline';
+}
+
+.tit_page {
+    text-align: center;
+    align-items: center;
+    padding-top: 60px;
+    
+}
