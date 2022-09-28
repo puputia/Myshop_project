@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8bcc305d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/product-details.css" />
+    <title>상품 상세</title>
+  </head>
+  <body>
+    <!-- 대치필요 -->
+    <header class="header">헤더영역 @views.html.common.header()</header>
+    <!-- //대치필요 -->
+    <input type="hidden" id="user_id" value="" />
+    <input type="hidden" id="option-count" value="@product.optionList.size" />
+    <input type="hidden" id="product_id" value="@product.productId" />
+    <input type="hidden" id="name" value="@product.name" />
+
+    <div class="container">
+      <!-- ------------------상단 정보 영역------------------- -->
+      <section class="product_top-info">
+        <div class="inner">
+          <article class="product_thum">
+            <div class="thum_img-list">
+              <ul>
+                <!-- <li><img src="@product.thumbnail" alt="@product.name" /></li> -->
+
+                <!-- 테스트 임시 썸네일 -->
+                <li class="active">
+                  <img src="img/product-img.jfif" alt="@product.name" />
+                </li>
+                <li><img src="img/product-img.jfif" alt="@product.name" /></li>
+                <!-- //테스트 임시 썸네일 -->
+              </ul>
+            </div>
+
+            <div class="thum_main-img">
+              <!-- 큰 썸네일에 alt값 추가가 필요합니다 -->
+              <!-- <img src="@product.thumbnail" alt="" /> -->
+
+              <!-- 테스트 임시 썸네일 -->
+              <img src="img/product-img.jfif" alt="" />
+              <!-- //테스트 임시 썸네일 -->
+            </div>
+          </article>
+
+          <article class="product_order">
+            <div class="order_tit-box">
+              <h2 class="product-name">@product.name</h2>
+              <p class="rating_star">
+                <span class="star">
+                  <b class="rating">4</b>
+                </span>
+                <span class="rating-total-count"><span>1개</span> 상품평</span>
+              </p>
+            </div>
+
+            <div class="product_price">
+              <input type="hidden" value="@product.price" name="price" />
+              <!-- <p id="price">@product.price 원</p> -->
+              <p id="price">30,000 원</p>
+            </div>
+
+            <!------------ 옵션 -------------->
+
+            <div class="product_option-box">
+              <div class="option">
+                <p class="option-name">@test</p>
+                <!-- name 옵션데이터이름을 넣어주세요 -->
+                <select name="size">
+                  <option>사이즈를 선택하세요</option>
+                  <option value="option-1">옵션명1</option>
+                  <option value="option-2">옵션명2</option>
+                  <option value="option-3">옵션명3</option>
+                  <option value="option-4">옵션명4</option>
+                  <option value="option-5">옵션명5</option>
+                </select>
+              </div>
+            </div>
+
+            <!------------ //옵션 -------------->
+
+            <!------------ 수량조절, 가격 -------------->
+
+            <div class="total-price">
+              <p>총 상품가격</p>
+              <input type="hidden" value="@product.price" />
+              <strong id="totPrice">@product.price 원</strong>
+            </div>
+            <!------------ //수량조절, 가격 -------------->
+
+            <!------------ 구매, 장바구니 버튼 -------------->
+            <div class="order-btn-grp">
+              <div class="order_count">
+                <button class="count_minus-btn" id="sub-quantity">-</button>
+                <input
+                  name="quantity"
+                  id="quantity"
+                  type="number"
+                  class="count-number"
+                  value="1"
+                />
+                <button class="count_plus-btn" id="add-quantity">+</button>
+              </div>
+
+              <button
+                class="add-cart_btn"
+                type="button"
+                id="add-cart-button"
+                value="cart"
+              >
+                장바구니담기
+              </button>
+              <button class="buy-now_btn" type="button" value="order">
+                구매하기
+              </button>
+            </div>
+            <!------------ //구매, 장바구니 버튼 -------------->
+          </article>
+        </div>
+      </section>
+      <!-- ------------------//상단 정보 영역------------------- -->
+
+      <!-- start tab-area -->
+      <div class="tab-contents">
+        <div class="inner">
+          <div class="product_tab-titles">
+            <ul>
+              <li class="active">
+                <a aria-current="page" href="#details">상세정보</a>
+              </li>
+              <li>
+                <a href="#review">상품평</a>
+              </li>
+              <li>
+                <a href="#qna">상품문의</a>
+              </li>
+            </ul>
+          </div>
+
+          <section class="product-detail" id="details">
+            <!-- 임시 상세이미지 -->
+            <img src="img/product-img.jfif" alt="임시 상세이미지" />
+            <!-- //임시 상세이미지 -->
+          </section>
+
+          <section class="product-review" id="review">
+            <div class="tit-box">
+              <h2 class="section-tit">상품평</h2>
+              <p class="section-tit-des">
+                - 상품을 구매한 다른 사람들의 리뷰를 살펴보세요
+              </p>
+              <button class="write-review-btn" onclick="writeReview()">
+                리뷰쓰기
+              </button>
+            </div>
+
+            <!-- 리뷰작성창 -->
+            <div class="review-layer">
+              <div class="write-review">
+                <h2 class="form-title">리뷰 작성하기</h2>
+                <div class="review-form-wrap">
+                  <div class="product-info">
+                    <div class="product-thum">
+                      <img src="img/width-long-test.jpg" alt="임시 썸네일" />
+                    </div>
+                    <h3 class="product-name">
+                      제품명 길게 테스트 문장을 적습니다 제품명 길게 테스트
+                      문장을 적습니다
+                      <p class="option-name">사이즈 230 / 옐로우 네이비</p>
+                    </h3>
+                  </div>
+
+                  <form action="#" method="post">
+                    <fieldset class="star_rating">
+                      <legend>별점주기</legend>
+
+                      <h3 class="stars-title">상품은 괜찮았나요?</h3>
+                      <div class="stars">
+                        <input
+                          type="radio"
+                          id="star_5"
+                          value="star_5"
+                          name="star-rating"
+                        /><label for="star_5">5점</label>
+                        <input
+                          type="radio"
+                          id="star_4"
+                          value="star_4"
+                          name="star-rating"
+                        />
+                        <label for="star_4">4점</label>
+                        <input
+                          type="radio"
+                          id="star_3"
+                          value="star_3"
+                          name="star-rating"
+                        /><label for="star_3">3점</label>
+                        <input
+                          type="radio"
+                          id="star_2"
+                          value="star_2"
+                          name="star-rating"
+                        /><label for="star_2">2점</label>
+
+                        <input
+                          type="radio"
+                          id="star_1"
+                          value="star_1"
+                          name="star-rating"
+                        /><label for="star_1">1점</label>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="write-my-review">
+                      <legend>리뷰 내용 작성</legend>
+                      <label>
+                        <h3 class="input-name">제목</h3>
+                        <input
+                          type="text"
+                          name="review-title"
+                          required
+                          placeholder="20글자 이내로 제목을 작성해 주세요"
+                          maxlength="20"
+                        />
+                      </label>
+
+                      <label>
+                        <h3 class="input-name">내용</h3>
+                        <textarea
+                          name="review-context"
+                          required
+                          placeholder="리뷰를 적어주세요!"
+                        ></textarea>
+                      </label>
+                    </fieldset>
+
+                    <fieldset class="upload-photo">
+                      <legend>리뷰 사진 등록</legend>
+                      <div class="add-photo">
+                        <label for="uploadPhoto">사진 첨부하기 +</label>
+                        <input
+                          type="file"
+                          name="review-images"
+                          accept=".jpg,.png,.jpeg"
+                          multiple
+                          id="uploadPhoto"
+                        />
+                        <p class="upload-notify">
+                          *사진은 최대 -개까지 등록할 수 있습니다.
+                        </p>
+                      </div>
+                      <ul>
+                        <!-- 추가되면 li>img를 추가해서 보일 수 있게 하면 좋을것 같아요! -->
+                        <li>업로드한 파일 미리보기</li>
+                        <li>업로드한 파일 미리보기</li>
+                        <li>업로드한 파일 미리보기</li>
+                        <li>업로드한 파일 미리보기</li>
+                        <li>업로드한 파일 미리보기</li>
+                      </ul>
+                    </fieldset>
+                    <div class="form-btn-wrap">
+                      <button class="close-btn" onclick="closePopup()">
+                        취소
+                      </button>
+                      <button class="review-submit-btn">등록</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- //리뷰작성창 -->
+
+            <div class="review-grp">
+              <article class="user-review">
+                <div class="review_top-box">
+                  <h3 class="review_tit">리뷰 제목</h3>
+                  <div class="review_info">
+                    <p class="review_stars">
+                      <span class="star_rating"></span>
+                    </p>
+                    <span class="review_product-info"
+                      >구매상품명과 옵션 내용</span
+                    >
+                    <span class="review_writing-time">2022.04.15 00:00:00</span>
+                  </div>
+                </div>
+
+                <div class="review_preview">
+                  <div class="review_txt">
+                    <p>
+                      테스트 글/// 커다란 지혜는 영원히 앞이 군영과 청춘에서만
+                      곳으로 실테스트 글/// 커다란 지혜는 영원히 앞이 군영과
+                      청춘에서만 곳으로 실테스트 글/// 커다란 지혜는 영원히 앞이
+                      군영과 청춘에서만 곳으로 실테스트 글/// 커다란 지혜는
+                      영원히 앞이 군영과 청춘에서만 곳으로 실테스트 글/// 커다란
+                      지혜는 영원히 앞이 군영과 청춘에서만 곳으로 실테스트 글///
+                      커다란 지혜는 영원히 앞이 군영과 청춘에서만 곳으로
+                      실테스트 글/// 커다란 지혜는 영원히 앞이 군영과 청춘에서만
+                      곳으로 실
+                    </p>
+
+                    <div class="review_btn-group">
+                      <button class="recomend-btn">
+                        <!-- 추천버튼을 누른 뒤 icon -->
+                        <!-- <img src="img/ico-solid_review-recomend.png" alt="내가 추천한 리뷰"> -->
+
+                        <!-- 추천버튼 누르기 전 icon -->
+                        <img
+                          src="img/ico-line_review-recomend.png"
+                          alt="이 리뷰 추천하기"
+                        />
+                        <!-- 추천 수 -->
+                        <span>67</span>
+                      </button>
+                      <a href="#" class="read-more-btn">리뷰 내용 더보기 >> </a>
+                    </div>
+                  </div>
+                  <div class="review_photo">
+                    <!-- 
+                      현재 사진더보기 팝업창은 display:none
+                      상태입니다.
+                      이 요소에 click이벤트를 추가하여 display상태를 변경할 수 있도록 해주시면 될것같아요! 
+                     -->
+                    <img src="img/product-img.jfif" alt="임시 이미지" />
+                  </div>
+                </div>
+
+                <!-- 리뷰 사진 더보기 창 -->
+                <div class="review-detail">
+                  <div class="content-box">
+                    <button class="prev-btn"></button>
+                    <button class="next-btn"></button>
+                    <button class="close-btn"></button>
+                    <h2 class="section-tit">리뷰제목</h2>
+                    <div class="photo-box">
+                      <div class="now-photo">
+                        <!-- <img src="img/height-long-test.jpg" alt="1" /> -->
+                        <img src="img/width-long-test.jpg" alt="1" />
+                      </div>
+                      <ul>
+                        <li><img src="img/width-long-test.jpg" alt="1" /></li>
+                        <li><img src="img/height-long-test.jpg" alt="2" /></li>
+                        <li><img src="img/product-img.jfif" alt="3" /></li>
+                        <li><img src="img/product-img.jfif" alt="4" /></li>
+                        <li><img src="img/product-img.jfif" alt="5" /></li>
+                        <li><img src="img/product-img.jfif" alt="6" /></li>
+                        <li><img src="img/product-img.jfif" alt="7" /></li>
+                        <li><img src="img/product-img.jfif" alt="8" /></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- //리뷰 사진 더보기 창 -->
+              </article>
+
+              <!-- 테스트  -->
+
+              <!-- //테스트  -->
+            </div>
+
+            <div class="pager">
+              <div class="btn-grp prev-btn">
+                <button>&lt;&lt;</button>
+                <button>&lt;</button>
+              </div>
+              <ul>
+                <li class="active"><button>1</button></li>
+                <li><button>2</button></li>
+                <li><button>3</button></li>
+                <li><button>4</button></li>
+                <li><button>5</button></li>
+              </ul>
+              <div class="btn-grp next-btn">
+                <button>&gt;</button>
+                <button>&gt;&gt;</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="product-qna" id="qna">
+            <div class="tit-box">
+              <h2 class="section-tit">상품문의</h2>
+              <p class="section-tit-des">
+                - 문의 혹은 주문이 많을 경우 답에 다소 시간이 지연될 수 있습니다
+              </p>
+              <button href="#" class="write-qna-btn">문의하기</button>
+            </div>
+
+            <!-- 문의 작성 창 -->
+            <div class="write-qna" id="writeQna">
+              <div class="content-box">
+                <button onclick="closeLayer()" class="close-btn">닫기</button>
+                <h2 class="section-tit">문의하기</h2>
+
+                <div class="form-wrap">
+                  <form action="#" method="post">
+                    <fieldset>
+                      <legend>문의하기</legend>
+
+                      <div class="qna-product">
+                        <h3 class="qna-tit">문의 상품</h3>
+
+                        <p class="option-name">@test</p>
+                        <!-- name 옵션데이터이름을 넣어주세요 -->
+
+                        <p class="option-name">@test</p>
+                        <!-- name 옵션데이터이름을 넣어주세요 -->
+                      </div>
+
+                      <div class="qna-content">
+                        <h3 class="qna-tit">문의 내용</h3>
+                        <textarea
+                          name="문의내용"
+                          required
+                          placeholder="문의내용을 남겨주세요"
+                        ></textarea>
+                      </div>
+                    </fieldset>
+
+                    <button class="qna-submit">문의남기기</button>
+                    <!-- <input type="submit" value="문의남기기" /> -->
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- //문의 작성 창 -->
+
+            <article class="qna-box">
+              <div class="user-q">
+                <strong class="qna-badge">질문</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="user-id">user-id</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">언제오나요?</p>
+                </div>
+              </div>
+
+              <div class="saller-a">
+                <strong class="qna-badge">답변</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="saller-name">saller-name</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">
+                    주문하신 제품은 주문일 익일 발송되었습니다.<br />
+                    배송 상세 정보는 마이페이지에서 확인하실 수 있습니다.<br />
+                    감사합니다
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <!-- 테스트 -->
+            <article class="qna-box">
+              <div class="user-q">
+                <strong class="qna-badge">질문</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="user-id">user-id</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">언제오나요?</p>
+                </div>
+              </div>
+
+              <div class="saller-a">
+                <strong class="qna-badge">답변</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="saller-name">saller-name</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">
+                    주문하신 제품은 주문일 익일 발송되었습니다.<br />
+                    배송 상세 정보는 마이페이지에서 확인하실 수 있습니다.<br />
+                    감사합니다
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="qna-box">
+              <div class="user-q">
+                <strong class="qna-badge">질문</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="user-id">user-id</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">언제오나요?</p>
+                </div>
+              </div>
+
+              <div class="saller-a">
+                <strong class="qna-badge">답변</strong>
+                <div class="qna-details">
+                  <h3 class="qna-info">
+                    <b class="saller-name">saller-name</b>
+                    <span class="qna-date">2022.04.15</span>
+                  </h3>
+                  <p class="qna-txt">
+                    주문하신 제품은 주문일 익일 발송되었습니다.<br />
+                    배송 상세 정보는 마이페이지에서 확인하실 수 있습니다.<br />
+                    감사합니다
+                  </p>
+                </div>
+              </div>
+            </article>
+            <!-- 테스트 -->
+
+            <div class="pager">
+              <div class="btn-grp prev-btn">
+                <button>&lt;&lt;</button>
+                <button>&lt;</button>
+              </div>
+              <ul>
+                <li class="active"><button>1</button></li>
+                <li><button>2</button></li>
+                <li><button>3</button></li>
+                <li><button>4</button></li>
+                <li><button>5</button></li>
+              </ul>
+              <div class="btn-grp next-btn">
+                <button>&gt;</button>
+                <button>&gt;&gt;</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">푸터 영역</footer>
+
+    <script src="js/tabMove.js"></script>
+    <script src="js/rating-star.js"></script>
+  </body>
+</html>

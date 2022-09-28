@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8bcc305d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/find-product.css" />
+    <title>검색하기</title>
+  </head>
+  <body>
+    <!-- 대치필요 -->
+    <header class="header">헤더영역 @views.html.common.header()</header>
+    <!-- //대치필요 -->
+    
+    <div class="container">
+      <h2 class="page-title">
+        <span class="search-keyword">신발</span>에 대한 검색결과
+      </h2>
+
+      <section class="result-option">  
+        <div class="search-sorting">
+        <ul>
+          <li class="active"><button>최신순</button></li>
+          <li><button>가격 낮은순</button></li>
+          <li><button>가격 높은순</button></li>
+        </ul>
+        </div>
+
+        <div class="change-list-size">
+            <p class="now-list-size">36개씩 보기</p>
+            <ul>
+                <li class="active">
+                    <input type="radio" name="listSize" id="listSize-36"></input>
+                    <label for="listSize-36">36개씩 보기</label>
+                </li>
+                <li>
+                    <input type="radio" name="listSize" id="listSize-48"></input>
+                    <label for="listSize-48">48개씩 보기</label>
+                </li>
+                <li>
+                    <input type="radio" name="listSize" id="listSize-60"></input>
+                    <label for="listSize-60">60개씩 보기</label>
+                </li>
+                <li>
+                    <input type="radio" name="listSize" id="listSize-72"></input>
+                    <label for="listSize-72">72개씩 보기</label>
+                </li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="search-result">
+        <ul class="result-list">
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">4.5</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <!-- 테스트---------------------------------------------------------------- -->
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">4</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">3.5</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">3</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">2.5</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">2</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">1.5</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">4.5</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">1</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                <dl>
+                    <dt class="images">
+                        <img
+                            src="img/height-long-test.jpg"
+                            alt="상품이미지 테스트"
+                        />
+                    </dt>
+
+                    <dd>
+                        <h3 class="product-name">상품명</h3>
+                        <strong class="product-price">30,000원</strong>
+                        <p class="rating_star">
+                            <span class="star">
+                                <b class="rating">4.5</b>
+                            </span>
+                            <span class="rating-total-count"><span>1개</span> 상품평</span>
+                        </p>
+                    </dd>
+                </dl>
+                </a>
+            </li>
+
+            <!-- 테스트---------------------------------------------------------------- -->
+        </ul>
+   
+        <div class="pager">
+          <div class="btn-grp prev-btn">
+            <button>&lt;&lt;</button>
+            <button>&lt;</button>
+          </div>
+          <ul>
+            <li class="active"><button>1</button></li>
+            <li><button>2</button></li>
+            <li><button>3</button></li>
+            <li><button>4</button></li>
+            <li><button>5</button></li>
+          </ul>
+          <div class="btn-grp next-btn">
+            <button>&gt;</button>
+            <button>&gt;&gt;</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">푸터 영역</footer>
+    <script src="js/rating-star.js"></script>
+  </body>
+</html>

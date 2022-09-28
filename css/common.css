@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+:root {
+  /* --text-color: #333; */
+  --background-color: #263343;
+  --acent-color: lightblue;
+  --section-margin: 120px;
+  --content-margin: 40px;
+  --price-color: #cc3300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* color: var(--text-color); */
+}
+
+.inner {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+fieldset {
+  border: none;
+  display: block;
+}
+legend {
+  font-size: 0;
+}

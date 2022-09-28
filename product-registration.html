@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8bcc305d64.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/product-registration.css" />
+    <title>상품 등록 하기</title>
+  </head>
+  <body>
+    <!-- 대치필요 -->
+    <header class="header">헤더영역 @views.html.common.header()</header>
+    <!-- //대치필요 -->
+
+    <div class="container">
+      <div class="inner">
+        <h2 class="page-title">상품 등록하기</h2>
+        <div class="form-wrapper">
+          <form action="#" method="post">
+            <fieldset class="product-basic-info">
+              <legend>상품 기본정보</legend>
+
+              <h3 class="section-title">상품 기본정보 등록</h3>
+              <div class="category">
+                <strong>카테고리</strong>
+                <select name="" id="" required>
+                  <option value="">대분류</option>
+                </select>
+                <select name="" id="" required>
+                  <option value="">소분류</option>
+                </select>
+                <select name="" id="" required>
+                  <option value="">상품종류</option>
+                </select>
+              </div>
+
+              <label class="product-name">
+                <strong>상품명</strong>
+                <input type="text" name="product-name" required />
+              </label>
+
+              <label class="product-price">
+                <strong>상품가격</strong>
+                <input type="text" name="product-price" required />
+              </label>
+            </fieldset>
+
+            <fieldset class="product-image">
+              <legend>상품 이미지 등록</legend>
+
+              <h3 class="section-title">상품 이미지 정보 등록</h3>
+
+              <div class="thumbnails">
+                <div class="add-thumbnails">
+                  <!-- 대표사진 등록하기 -->
+                  <label class="add-main-thumbnail">
+                    <span>대표사진 업로드</span>
+                    <input
+                      type="file"
+                      name="main-thumbnail"
+                      accept=".jpg,.png,.jpeg"
+                      required
+                    />
+                  </label>
+
+                  <!-- 상품미리보기 이미지 등록 -->
+                  <label class="add-sub-thumbnail">
+                    <span>미리보기 사진 업로드</span>
+                    <input
+                      type="file"
+                      name="sub-thumbnail"
+                      accept=".jpg,.png,.jpeg"
+                      multiple
+                    />
+                  </label>
+
+                  <!-- 상품 상세 이미지 등록 -->
+                  <label class="add-detail-image">
+                    <span>상품 상세이미지 업로드</span>
+                    <input
+                      type="file"
+                      name="detail-image"
+                      accept=".jpg,.png,.jpeg"
+                    />
+                  </label>
+                </div>
+
+                <div class="image-preview">
+                  <!-- 등록한 상세이미지 미리보기 -->
+                  <div class="detail-image-preview">
+                    <img src="img/product-detail-thumb.png" alt="상세이미지" />
+                  </div>
+
+                  <div class="thumbnail-preview">
+                    <!-- 등록한 대표이미지 미리보기 -->
+                    <div class="main-thumbnail-preview">
+                      <img src="img/product-main-thumb.png" alt="대표사진" />
+                    </div>
+
+                    <!-- 등록한 상품미리보기 이미지 확인 -->
+                    <ul class="sub-thumbnail-preview">
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                      <li>
+                        <button class="delite-image">이미지 지우기</button>
+                        <img
+                          src="img/height-long-test.jpg"
+                          alt="상품미리보기"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <button class="product-registration-btn">상품등록</button>
+
+            <fieldset class="product-option">
+              <legend>상품 옵션 등록</legend>
+
+              <h3 class="section-title">
+                <span>상품 옵션 추가</span>
+                <div class="option-btn-group">
+                  <button class="option-add-btn">옵션추가</button>
+                  <button class="save-option-btn">저장</button>
+                </div>
+              </h3>
+
+              <ul class="option-list">
+                <li class="option">
+                  <label class="option-name">
+                    <span>옵션명</span>
+                    <input type="text" />
+                  </label>
+                  
+                <div class="item-btn-grp">
+                  <button class="item-add-btn">항목 추가 +</button>
+                  <button class="option-delite-btn">옵션 삭제 X</button>
+                </div>
+
+                  <ul class="item-list">
+                    <li class="item">
+                      <label class="item-name">
+                        <span>항목 이름</span>
+                        <input type="text" />
+                      </label>
+
+                      <label class="item-surcharge">
+                        <span>항목 추가금</span>
+                        <input type="text" />
+                      </label>
+                      <button class="delite-item-btn">항목삭제 X</button>
+                    </li>
+
+                    <li class="item">
+                      <label class="item-name">
+                        <span>항목 이름</span>
+                        <input type="text" />
+                      </label>
+
+                      <label class="item-surcharge">
+                        <span>항목 추가금</span>
+                        <input type="text" />
+                      </label>
+                      <button class="delite-item-btn">항목삭제 X</button>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- 옵션 테스트 ------------------------------------------------------->
+                <li class="option">
+                  <label class="option-name">
+                    <span>옵션명</span>
+                    <input type="text" />
+                  </label>
+                  
+                <div class="item-btn-grp">
+                  <button class="item-add-btn">항목 추가 +</button>
+                  <button class="option-delite-btn">옵션 삭제 X</button>
+                </div>
+
+                  <ul class="item-list">
+                    <li class="item">
+                      <label class="item-name">
+                        <span>항목 이름</span>
+                        <input type="text" />
+                      </label>
+
+                      <label class="item-surcharge">
+                        <span>항목 추가금</span>
+                        <input type="text" />
+                      </label>
+                      <button class="delite-item-btn">항목삭제 X</button>
+                    </li>
+
+                    <li class="item">
+                      <label class="item-name">
+                        <span>항목 이름</span>
+                        <input type="text" />
+                      </label>
+
+                      <label class="item-surcharge">
+                        <span>항목 추가금</span>
+                        <input type="text" />
+                      </label>
+                      <button class="delite-item-btn">항목삭제 X</button>
+                    </li>
+                  </ul>
+                </li>
+                <!-- //옵션 테스트 ------------------------------------------------------->
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- 대치필요 -->
+    <footer class="footer">푸터 영역</footer>
+    <!-- //대치필요 -->
+  </body>
+</html>
